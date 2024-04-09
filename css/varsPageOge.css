@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+.var1-Z .var1-Z1 {
+  margin: 0 40px;
+  text-align: justify;
+}
+.var1-Z .var1-Z1 span {
+  display: flex;
+  justify-content: center;
+}
+.var1-Z details {
+  margin: 10px 40px;
+}
+.var1-Z details summary {
+  font-size: 22px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+.var1-Z details p {
+  margin-top: 15px;
+}
+
+table, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 10px 15px;
+  margin: auto;
+  text-align: center;
+  font-weight: 800;
+}
+
+.shifr {
+  font-size: 35px;
+}/*# sourceMappingURL=varsPageOge.css.map */

@@ -66,19 +66,19 @@ main{
         flex-direction: column;
         align-items: center;
         padding: 50px;
-        gap: 50px;
+        gap: 60px;
         li{        
             
             a{
-                font-size: 40px;
-                border: 3px solid;
-                padding: 10px;
+                font-size: 30px;
+                border: 3px solid $back-top-color;
+                padding: 20px;
                 border-radius: 50px;
+                transition: all 0.3s ease-in-out;
             }
             a:hover{
-                color: rgb(246, 248, 250);
-                background-color: black;
-                border: none;
+                background-color: $back-top-color;
+                transition: all 0.3s ease-in-out;
                 
             }
         }

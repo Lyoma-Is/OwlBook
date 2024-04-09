@@ -7,6 +7,7 @@
     <title>Вариант 1 ОГЭ информатика</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/pageOge.css">
+    <link rel="stylesheet" href="../../css/varsPageOge.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo">
-                    <a href="../../index.html"><img class="logo-img" src="/img/logo.png" alt="logo"></a>
+                    <a href="../../index.html"><img class="logo-img" src="../../img/logo.png" alt="logo"></a>
                 </div>
                 <nav class="header-navbar">
                     <ul>
@@ -34,38 +35,379 @@
             <section class="var1-Z">
                 <p class="var1-Z1"><b>Задание 1.</b> В кодировке Windows-1251 каждый символ кодируется 8 битами.
                     Вова хотел написать текст (в нём нет лишних пробелов): <br><br>
-
                     <span>«Ом, Бор, Кюри, Попов, Джоуль, Рентген, Курчатов, Резерфорд – великие физики». </span><br>
-
                     Фамилию одного учёного ученик написал два раза подряд, добавив необходимые запятую и пробел. При
                     этом размер написанного предложения в данной кодировке оказался на 8 байт больше, чем размер нужного
-                    предложения. Напишите в ответе слово, использованное дважды.</p>
-                    <details>
-                        <summary><b>Решение</b></summary>
-                        <p>
-                            <b>Ответ:</b> Джоуль<br> 
-                            1) Каждый символ кодируется <b>8 битами</b> то есть <b>1 байт</b>. <br>
-                            2) Предложения в данной кодировке оказался на <b>8 байт больше</b>. <br>
-                            3) Значит: 8 : 1 = 8 символов, с учётом 2 двух символов (запятой и пробел)<br>
-                            4) 8 - 2 = 6 символов то есть Джоуль
-                        </p>
-                    </details>
+                    предложения. Напишите в ответе слово, использованное дважды.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        1) Каждый символ кодируется <b>8 битами</b> то есть <b>1 байт</b>. <br>
+                        2) Предложения в данной кодировке оказался на <b>8 байт больше</b>. <br>
+                        3) Значит: 8 : 1 = 8 символов, с учётом 2 двух символов (запятой и пробел)<br>
+                        4) 8 - 2 = 6 символов то есть Джоуль<br><br>
+                        <b>Ответ:</b> Джоуль
+                    </p>
+                </details>
             </section>
             <hr>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
-            <section class="var1-Z"></section>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 2.</b> От разведчика была получена следующая шифрованная радиограмма,
+                    переданная с использованием азбуки Морзе.<br><br>
+                    <span class="shifr">• – – – • • – – • • • • • – – •</span><br>
+                    При передаче радиограммы было потеряно разбиение на буквы, но известно, что в радиограмме
+                    использовались только следующие буквы.<br><br>
+
+                <table>
+                    <thead>
+                        <tr class="tr__head">
+                            <td>М</td>
+                            <td>Н</td>
+                            <td>С</td>
+                            <td>У</td>
+                            <td>А</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr__body">
+                            <td>– –</td>
+                            <td>– •</td>
+                            <td>• • •</td>
+                            <td>• • –</td>
+                            <td>• –</td>
+                        </tr>
+
+                    </tbody>
+
+                </table><br>
+                <p class="var1-Z1">Определите текст радиограммы. В ответе запишите получившееся слово (набор букв).</p>
+
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p> Так как необходимо определить текст радиограммы, в ответе пишем набор букв.<br><br>
+                        <span class="shifr">• – / – – / • • – / – • / • • • / • – / – •</span><br><br>
+                        <b>Ответ:</b> АМУНСАН
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"><b>Задание 3.</b> Напишите натуральное число x, для которого <b>ложно</b>
+                    высказывание:<br><br>
+                    <span>(x < 4) ИЛИ НЕ (x < 5)</span>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p> Так как высказывание должно быть ложным, то меняем знаки там где нет <b>НЕ</b>,
+                        то есть меняем высказывание с ложного на истинное<br><br>
+                        Было: (x < 4) ИЛИ НЕ (x < 5) – высказывание ложно<br><br>
+                            Стало: (x >= 4) И (x < 5) – высказывание истинно<br><br>
+                                <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"><b>Задание 4.</b> Между населёнными пунктами A, B, C, D,
+                    E, F построены дороги, протяжённость которых (в километрах) приведена в таблице.</p><br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                            <td>E</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>2</td>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>5</td>
+                            <td>2</td>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                            <td></td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td></td>
+                            <td></td>
+                            <td>3</td>
+                            <td></td>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>15</td>
+                            <td></td>
+                            <td></td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td style="text-align: center; background-color: #ffbf80;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="var1-Z1">Определите длину кратчайшего пути между пунктами A и F. Передвигаться можно только по
+                    дорогам, указанным в таблице.<br>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <img src="../../img/task4/v1_task4_1_11.png" alt="task4_1_11">
+                    <p>
+                        Найдем все варианты маршрутов из A в F и выберем самый короткий.<br><br>
+                        Из пункта A можно попасть в пункт B, C, F.<br>
+                        Из пункта B можно попасть в пункты C.<br>
+                        Из пункта C можно попасть в пункт D, E.<br>
+                        Из пункта D можно попасть в пункт F.<br>
+                        Из пункта E можно попасть в пункт F.<br><br>
+                        A—F: длина маршрута 15км.<br>
+                        A—B—C—E—F: длина маршрута 11км.<br>
+                        A—B—C—D—F: длина маршрута 11км.<br>
+                        A—C—E—F: длина маршрута 12км.<br><br>
+                        Самый короткий путь: A—B—C—D—F. Длина маршрута 11км.<br><br>
+                        <b>Ответ:</b> 11
+                    </p>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 5. </b>
+                    У исполнителя Делитель две команды, которым присвоены номера:<br><br>
+                    <b>1. раздели на 2</b><br>
+                    <b>2. прибавь 1</b><br><br>
+                    Первая из них уменьшает число на экране в 2 раза, вторая увеличивает его на 1. Исполнитель работает
+                    только с натуральными числами.
+                    Составьте алгоритм получения <b>из числа 89 числа 24, содержащий не более 5 команд</b>.<br>
+                    В ответе запишите только номера команд.<br>
+
+                    (Например, 21121 –<br>
+                    это алгоритм:<br>
+                    прибавь 1<br>
+                    раздели на 2<br>
+                    раздели на 2<br>
+                    прибавь 1<br>
+                    раздели на 2,<br>
+                    который преобразует число 75 в 10.)<br>
+
+                    Если таких алгоритмов более одного, то запишите любой из них.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        Нужно составить алгоритм чтобы получить из числа 89 число 24.<br>
+                        Смотрим<br>
+                        <b>89</b> делится на 2, нет, поэтому прибавляем 1<br>
+                        2. прибавь 1 = 90 делится на 2, да, поэтому делим на 2 и т. д.<br>
+                        1. раздели на 2 = 45<br>
+                        2. прибавь 1 = 46<br>
+                        1. раздели на 2 = 23<br>
+                        2. прибавь 1 = 24<br>
+                        <b>24</b><br>
+                        Из числа 89 получили число 24, в ответе записываем номера команд из условия задачи.<br><br>
+                        <b>Ответ:</b> 21212
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 6. </b>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 7. </b>
+                    Доступ к файлу <b>ftp.jpg</b>, находящемуся на сервере <b>text.net</b>, осуществляется по протоколу
+                    <b>ftp</b>. Фрагменты
+                    адреса файла закодированы цифрами от 1 до 7. Запишите последовательность этих цифр, кодирующую адрес
+                    указанного файла в сети Интернет.<br><br>
+                    1) .net<br>
+                    2) jpg<br>
+                    3) ftp.<br>
+                    4) //<br>
+                    5) ftp:<br>
+                    6) /<br>
+                    7) text<br>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <b style="font-size: 25px;">Протокол :// Сервер / Файл</b><br><br>
+                        <b style="font-size: 25px;">ftp :// text.net / ftp.jpg</b><br><br>
+                        <b>Ответ:</b> 5471632
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 8. </b>В языке запросов поискового сервера для
+                    обозначения логической операции «ИЛИ» используется символ «|», а для логической операции «И» –
+                    символ «&amp;».<br>В таблице приведены запросы и количество найденных по ним страниц некоторого
+                    сегмента сети Интернет.</p><br>
+                <table>
+                    <tbody>
+                        <tr style="background-color: #ffbf80;">
+                            <td><strong>Запрос</strong></td>
+                            <td><strong>Найдено страниц (в тысячах)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><em>Пшеница | Овёс</em></td>
+                            <td>6400</td>
+                        </tr>
+                        <tr>
+                            <td><em>Пшеница &amp; Овёс</em></td>
+                            <td>550</td>
+                        </tr>
+                        <tr>
+                            <td><em>Пшеница</em></td>
+                            <td>4300</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <p class="var1-Z1">Какое количество страниц (в тысячах) будет найдено по запросу
+                    <em>Овёс</em>?<br><br>Считается, что все запросы выполнялись практически одновременно, так что набор
+                    страниц, содержащих все искомые слова, не изменялся за время выполнения запросов.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        В таблице запросов видим что есть два запроса <em> Пшеница и Овёс</em>.<br><br>
+                        Смотрим и в первой и во второй строке видим что есть знаки операции: символ «|» и символ «&», в
+                        третьей строке
+                        нет знаков операции.<br><br>
+                        Поэтому складываем Первый и Второй запрос и отнимаем Третий.<br><br>
+                        ( Пшеница | Овёс ) + ( Пшеница & Овёс ) - ( Пшеница ) <br><br>
+                        6400 + 550 - 4300 = 2650<br>
+
+                        <br><b>Ответ:</b> 2650
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 9. </b>
+                    На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж и К. По каждой дороге можно
+                    двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из
+                    города А в город К?<br>
+                    <img src="../../img/task9/v1_task9_1_12.png" alt="task9_1"
+                        style="display: block; margin: auto; width: 400px;">
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <img src="../../img/task9/v1_9_1_12.png" alt="v1_9_1_12" style="width: 400px;"><br>
+                        <b>Ответ:</b> 12
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 10. </b>
+                    Переведите число 105 из десятичной системы счисления в двоичную систему счисления. Сколько единиц
+                    содержит полученное число?<br>
+                    В ответе укажите одно число – количество единиц.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <img src="../../img/task10/v1_task10_1_4.png" alt="v1_task10_1_4"><br><br>
+                        Пишем остатки в обратном порядке: <b style="color: red;">11</b>0<b style="color: red;">1</b>00<b style="color: red;">1</b><br>
+                        В ответе нужно указать сколько единиц в двоичной записи<b><br><br>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <!-- <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 11. </b>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">
+                <p class="var1-Z1"> <b>Задание 12. </b>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">    
+                <p class="var1-Z1"> <b>Задание 13. </b>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p> 
+                                <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">    
+                <p class="var1-Z1"> <b>Задание 14. </b>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p> 
+                                <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section>
+            <hr>
+            <section class="var1-Z">    
+                <p class="var1-Z1"> <b>Задание 15. </b>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p> 
+                                <b>Ответ:</b> 4
+                    </p>
+                </details>
+            </section> -->
         </div>
 
     </main>
