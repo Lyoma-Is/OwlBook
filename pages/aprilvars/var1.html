@@ -242,12 +242,103 @@
             </section>
             <hr>
             <section class="var1-Z">
-                <p class="var1-Z1"> <b>Задание 6. </b>
+                <p class="var1-Z1"> <b>Задание 6. </b> Ниже приведена программа, записанная на пяти языках
+                    программирования. </p><br>
+                <table class="table-6">
+                    <tbody>
+                        <tr style="background-color: #ffbf80;">
+                            <td>Бейсик</td>
+                            <td>Python</td>
+                        </tr>
+                        <tr>
+                            <td class="table-6_td">
+                                DIM k, s AS INTEGER<br>
+                                &emsp;INPUT s<br>
+                                &emsp;INPUT k<br>
+                                &emsp;IF s \ 2 = k THEN<br>
+                                &emsp;&emsp;PRINT "ДА"<br>
+                                &emsp;ELSE<br>
+                                &emsp;&emsp;PRINT "НЕТ"<br>
+                                &emsp;END IF</td>
+
+                            <td class="table-6_td">
+                                s = int(input())<br>
+                                k = int(input())<br>
+                                if s // 2 == k:<br>
+                                &emsp;print("ДА")<br>
+                                else:<br>
+                                &emsp;print("НЕТ")<br>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #ffbf80;">
+                            <td>Паскаль</td>
+                            <td>Алгоритмический язык</td>
+                        </tr>
+                        <tr>
+                            <td class="table-6_td">
+                                var s, k: integer;<br>
+                                begin <br>
+                                &emsp;readln(s);<br>
+                                &emsp;readln(k);<br>
+                                &emsp;if s div 2 = k<br>
+                                &emsp;&emsp;then writeln ('ДА')<br>
+                                &emsp;&emsp;else writeln ('НЕТ')<br>
+                                end.<br>
+                            </td>
+                            <td class="table-6_td">алг<br>
+                                нач <br>
+                                цел s, k<br>
+                                ввод s<br>
+                                ввод k<br>
+                                если div(s, 2) = k<br>
+                                &emsp;то вывод "ДА"<br>
+                                &emsp;иначе вывод "НЕТ"<br>
+                                все <br>
+                                кон<br>
+
+                            </td>
+                        </tr>
+                        <tr style="background-color: #ffbf80;">
+                            <td scope="row" colspan="2">С++</td>
+                        </tr>
+                        <tr>
+                            <td class="table-6_td" scope="row" colspan="2">#include <iostream><br>
+                                    using namespace std;<br>
+                                    int main() {<br>
+                                    &emsp;int s, k;
+                                    &emsp;cin >> s;<br>
+                                    &emsp;cin >> k;<br>
+                                    &emsp;if (s / 2 == k)<br>
+                                    &emsp;&emsp;cout << "ДА" ;<br>
+                                        &emsp;else <br>
+                                        &emsp;&emsp;cout << "НЕТ" ;<br>
+                                            &emsp;return 0;<br>
+                                            }<br>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <p class="var1-Z1"> Было проведено 9 запусков программы, при которых в качестве значений переменных s и
+                    k вводились
+                    следующие пары чисел:<br><br>
+
+                    <span>(1, 1); (8, 4); (14, 10); (20, 1); (7, 3); (10, 5); (10, 2); (4, 1); (1, 0).</span>
+
+                    <br>Сколько было запусков, при которых программа напечатала «ДА»?
                 </p>
                 <details>
                     <summary><b>Решение</b></summary>
                     <p>
-                        <b>Ответ:</b> 4
+                        Заметим, что программа напечатает «ДА», если переменная k будет равна результату целочисленного
+                        деления s на 2, то есть делится нацело. В качестве значений переменных s и k в этих случаях вводились
+                        следующие пары чисел: <br><br>
+                        <span style="display: block; text-align: center;">(8, 4); (7, 3); (10, 5); (1, 0).</span>
+                        8 / 2 = 4<br>
+                        7 / 2 = 3<br>
+                        10 / 2 = 5<br>
+                        1 / 2 = 0<br>
+                        <br><b>Ответ:</b> 4
                     </p>
                 </details>
             </section>
@@ -348,7 +439,8 @@
                     <summary><b>Решение</b></summary>
                     <p>
                         <img src="../../img/task10/v1_task10_1_4.png" alt="v1_task10_1_4"><br><br>
-                        Пишем остатки в обратном порядке: <b style="color: red;">11</b>0<b style="color: red;">1</b>00<b style="color: red;">1</b><br>
+                        Пишем остатки в обратном порядке: <b style="color: red;">11</b>0<b style="color: red;">1</b>00<b
+                            style="color: red;">1</b><br>
                         В ответе нужно указать сколько единиц в двоичной записи<b><br><br>Ответ:</b> 4
                     </p>
                 </details>
