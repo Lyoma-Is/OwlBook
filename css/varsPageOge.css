@@ -5,6 +5,13 @@
   font-size: 22px;
 }
 
+.var1-text {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 40px;
+}
+
 .var1-Z .var1-Z1 {
   margin: 0 40px;
   text-align: justify;
@@ -39,6 +46,16 @@ table, td {
 
 .shifr {
   font-size: 35px;
+}
+
+.img-task_9 {
+  display: block;
+  margin: auto;
+  width: 400px;
+}
+
+.img-task_9a {
+  width: 400px;
 }
 
 .table-6 .table-6_td {
