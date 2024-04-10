@@ -39,5 +39,59 @@ hr{
     margin: 30px;
 }
 
-// vars
+.task-block{
+    padding-left: 30px;
+    font-size: 22px;
+    .task-block_inner{
+        padding: 10px;
+        a:hover{
+            color: rgb(255, 72, 0);
+            border-bottom: 1px solid;
+        }
+    }
+    
+}
+details{
+    margin: 10px 0;
+    summary {
+        font-size: 20px;
+        display: block;
+        width: fit-content;  
+        border-bottom: 1px solid;     
+        cursor: pointer; 
+        
+    }
+    p{
+        margin-top: 15px;
+    }
+}
+// tasks-1
+.task-1-info{
+    font-size: 23px;
+    padding: 20px 0 0 20px;
+}
+.task-1-info_inner{
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+.task-hr{
+    border: 1px solid $color-orange;
+    margin: 0 20px 5px 20px;
+}
+.task-one{
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+    .task-one__text{
+        a{
+            color: blue;
+            border-bottom: 1px solid;
+        }
+
+    }
+}
+
+
+
 
