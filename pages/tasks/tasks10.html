@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подотовка.ру</title>
+    <link rel="icon" href="../../img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/pageOge.css">
+    <link rel="stylesheet" href="../../css/media.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../../index.html"><img class="logo-img" src="../../img/logo.png" alt="logo"></a>
+                </div>
+                <nav class="header-navbar">
+                    <ul>
+                        <li><a href="../../pages/pageOgeInf.html">Информатика ОГЭ</a></li>
+                        <li><a href="../../pages/pageEgeInf.html">Информатика ЕГЭ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <h3 class="task-info">Задание 10. ОГЭ по информатике. Перевод чисел из десятичной системы исчисления в
+                двоичную и обратно. ФИПИ</h3>
+            <hr class="task-hr__info">
+            <p class="task-info_inner">
+                <b>Задания 10.</b> ОГЭ по информатике, предполагает, что ученик знает, как переводить числа из одной
+                системы исчисления в другую.<br>
+                В частности, из десятичной в двоичную и из двоичной в десятичную.<br>
+                Задание проверяет не только знания, но и внимательность. Где-то нужно записать само полученное число без
+                указания системы исчисления, где-то количество нулей, где-то - единиц.<br>
+                Так что <b style="background-color: aquamarine;">внимательность</b> и еще раз <b
+                    style="background-color: aquamarine;">внимательность</b>, чтобы не проморгать балл.<br><br>
+
+                Для перевода числа из десятичной системы счисления в двоичную можно воспользоваться оператором <b>bin()</b>. <br>
+                У результата также будет префикс <b>0b</b>, указывающий на основание системы счисления.<br>
+
+                Ввод:<br>
+                number = 123<br>
+                result = bin(number)<br>
+                print(result)<br><br>
+
+                Вывод:<br>
+                '0b1111011'<br><br>
+
+                Для перевода в восьмеричную систему счисления есть оператор <b>oct()</b>.<br>
+                Он также возвращает строку с восьмеричным числом и префиксом <b>0o</b>.<br><br>
+
+                При переводе в шестнадцатеричную систему счисления воспользуемся оператором <b>hex()</b>.<br>
+                Он вернет строку шестнадцатеричным числом и префиксом <b>0x</b>. <br><br>
+
+                Для перевода чисел В десятичную систему счисления можно использовать оператор <b>int()</b>. <br>
+                Для этого передадим ему два аргумента, первый - это строка с числом в какой-то системе счисления, а второй - это основание
+                системы счисления самого числа. <br>
+                По умолчанию для этого необязательного аргумента стоит значение равное 10.<br>
+                В качестве самого числа нужно обязательно передать строку. Строка может содержать или само число или
+                число с префиксом системы счисления.<br><br>
+
+                Перевод из двоичной<br>
+
+                Ввод:<br>
+                number = '11001'<br>
+                result = int(number, 2)<br>
+                print(result)<br><br>
+
+                Вывод:<br>
+                25<br><br>
+
+                Из восьмеричной:<br>
+
+                Ввод:<br>
+                number = '12367'<br>
+                result = int(number, 8)<br>
+                print(result)<br><br>
+
+                Вывод:<br>
+                5367
+            </p>
+            <hr class="task-hr__info">
+
+        </div>
+
+    </main>
+
+    <!-- <footer>
+
+    </footer> -->
+</body>
+
+</html>

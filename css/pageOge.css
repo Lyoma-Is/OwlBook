@@ -62,19 +62,24 @@ details p {
   margin-top: 15px;
 }
 
-.task-1-info {
+.task-info {
   font-size: 23px;
   padding: 20px 0 0 20px;
 }
 
-.task-1-info_inner {
+.task-info_inner {
   padding: 20px;
   font-size: 20px;
   text-align: justify;
 }
 
+.task-hr__info {
+  border: 2px solid rgb(45, 150, 13);
+  margin: 0 20px 5px 20px;
+}
+
 .task-hr {
-  border: 2 px solid rgb(204, 166, 60);
+  border: 2px solid rgb(204, 166, 60);
   margin: 0 20px 5px 20px;
 }
 
@@ -86,4 +91,14 @@ details p {
 .task-one .task-one__text a {
   color: blue;
   border-bottom: 1px solid;
+}
+
+.task-three {
+  padding: 20px;
+  font-size: 20px;
+  text-align: justify;
+}
+.task-three .task-three__text span {
+  display: block;
+  text-align: center;
 }/*# sourceMappingURL=pageOge.css.map */
