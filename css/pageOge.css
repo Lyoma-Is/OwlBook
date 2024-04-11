@@ -101,4 +101,18 @@ details p {
 .task-three .task-three__text span {
   display: block;
   text-align: center;
+}
+
+.task-ten {
+  padding: 20px;
+  font-size: 20px;
+  text-align: justify;
+}
+.task-ten .task-three__text span {
+  display: block;
+  text-align: center;
+}
+
+.font-oz {
+  color: red;
 }/*# sourceMappingURL=pageOge.css.map */
