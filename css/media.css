@@ -118,12 +118,19 @@
   }
   .task-info {
     font-size: 17px;
-    padding: 10px 0 0 20px;
+    padding: 10px 20px 0 20px;
   }
   :is(.task-one, .task-three, .task-ten, .task-info_inner) {
     font-size: 15px;
     padding: 10px 20px 10px 20px;
     text-align: left;
+  }
+  .task-block {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+  .task-block .task-block_inner {
+    padding: 10px;
   }
   details summary {
     font-size: 15px;

@@ -38,23 +38,13 @@
             <p class="task-info_inner">
                 <b>Задания 10.</b> ОГЭ по информатике, предполагает, что ученик знает, как переводить числа из одной
                 системы исчисления в другую.<br>
-                В частности, из десятичной в двоичную и из двоичной в десятичную.<br>
-                Задание проверяет не только знания, но и внимательность. Где-то нужно записать само полученное число без
-                указания системы исчисления, где-то количество нулей, где-то - единиц.<br>
-                Так что <b style="background-color: aquamarine;">внимательность</b> и еще раз <b
-                    style="background-color: aquamarine;">внимательность</b>, чтобы не проморгать балл.<br><br>
+                В частности, из десятичной в двоичную и из двоичной в десятичную.<br><br>
 
                 Для перевода числа из десятичной системы счисления в двоичную можно воспользоваться оператором
-                <b>bin()</b>. <br>
-                У результата также будет префикс <b>0b</b>, указывающий на основание системы счисления.<br>
+                <b>bin()</b>.<br>
+                У результата также будет префикс <b>0b</b>, указывающий на основание системы счисления.<br><br>
 
-                Ввод:<br>
-                number = 123<br>
-                result = bin(number)<br>
-                print(result)<br><br>
-
-                Вывод:<br>
-                '0b1111011'<br><br>
+                print(bin(123))<br><br> Вывод: '0b1111011'<br><br>
 
                 Для перевода в восьмеричную систему счисления есть оператор <b>oct()</b>.<br>
                 Он также возвращает строку с восьмеричным числом и префиксом <b>0o</b>.<br><br>
@@ -70,25 +60,13 @@
                 В качестве самого числа нужно обязательно передать строку. Строка может содержать или само число или
                 число с префиксом системы счисления.<br><br>
 
-                Перевод из двоичной<br>
+                Перевод из двоичной<br><br>
 
-                Ввод:<br>
-                number = '11001'<br>
-                result = int(number, 2)<br>
-                print(result)<br><br>
+                result = int('11001', 2)<br> print(result)<br><br> Вывод: 25<br><br>
 
-                Вывод:<br>
-                25<br><br>
+                Из восьмеричной:<br><br>
 
-                Из восьмеричной:<br>
-
-                Ввод:<br>
-                number = '12367'<br>
-                result = int(number, 8)<br>
-                print(result)<br><br>
-
-                Вывод:<br>
-                5367
+                result = int('12367', 8)<br>print(result)<br><br>Вывод: 5367<br>
             </p>
             <hr class="task-hr__info">
 
@@ -221,7 +199,7 @@
                         </tbody>
                     </table>
                     <b>
-                        <font class="font-oz">1</font>0<font class="font-oz">111</font>0<font class="font-oz">1</font>
+                        <span class="font-oz">1</span>0<span class="font-oz">111</span>0<span class="font-oz">1</span>
                     </b><br>
                     <b>Ответ:</b> 5
                 </details>
@@ -451,8 +429,7 @@
 
                         </tbody>
                     </table>
-                    ><br>
-                    <b>Ответ:</b> <b>1011101</b>
+                    <br><b>Ответ:</b> <b>1011101</b>
                 </details>
             </div>
             <hr class="task-hr">
@@ -463,7 +440,7 @@
                     Среди приведённых ниже трёх чисел, записанных в различных системах счисления, найдите максимальное и
                     запишите его в ответе в десятичной системе счисления. В ответе запишите только число, основание
                     системы счисления указывать не нужно.<br><br>
-                    <span>23<sub>16</sub>,  32<sub>8</sub>,  11110<sub>2</sub></span> 
+                    <span>23<sub>16</sub>, 32<sub>8</sub>, 11110<sub>2</sub></span>
                 </p>
 
                 </p>
@@ -471,15 +448,544 @@
                     <summary><b>Решение</b></summary>
                     <p>Переведём все числа в десятичную систему счисления:<br><br>
                         23<sub>16</sub> = 2*16<sup>1</sup> + 3*16<sup>0</sup> = 32 + 3 = 35<sub>10</sub>;<br>
-                        32<sub>8</sub>=3*8<sup>1</sup> + 2*8<sup>0</sup> = 24 + 2 = 26<sub>10</sub>;<br>
-                        11110<sub>2</sub> = 1*2<sup>4</sup> + 1*2<sup>3</sup> + 1*2<sup>2</sup> + 1*2<sup>1</sup> + 0*2<sup>0</sup> = 16 + 8 + 4 + 2 = 30<sub>10</sub>.<br><br>
+                        32<sub>8</sub>= 3*8<sup>1</sup> + 2*8<sup>0</sup> = 24 + 2 = 26<sub>10</sub>;<br>
+                        11110<sub>2</sub> = 1*2<sup>4</sup> + 1*2<sup>3</sup> + 1*2<sup>2</sup> + 1*2<sup>1</sup> +
+                        0*2<sup>0</sup> = 16 + 8 + 4 + 2 = 30<sub>10</sub>.<br><br>
                         Наибольшим среди этих трёх чисел является число 35.<br><br>
                         <b>Ответ:</b> 35<br><br>
                         <strong>Решение на Python</strong>
-                        <br><br>def f(x, i):<br> 
-                        &emsp;x = int(str(x), i)<br> 
+                        <br><br>def f(x, i):<br>
+                        &emsp;x = int(str(x), i)<br>
                         &emsp;return x<br>
-                        print(max(f(23, 16), f(32, 8), f(11110, 2)))</p>
+                        print(max(f(23, 16), f(32, 8), f(11110, 2)))
+                    </p>
+                </details>
+            </div>
+            <hr class="task-hr">
+
+            <!-- 6 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>6) </b>
+                    Вычислите значение арифметического выражения:<br><br>
+                    <span>11111011<sub>2</sub> + 1101<sub>8</sub> – 101<sub>16</sub></span>
+                </p>
+
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        11111011<sub>2</sub> =
+                        1∙2<sup>7</sup>+1∙2<sup>6</sup>+1∙2<sup>5</sup>+1∙2<sup>4</sup>+1∙2<sup>3</sup>+0∙2<sup>2</sup>+1∙2<sup>1</sup>+1∙2<sup>0</sup>
+                        = 128+64+32+16+8+0+2+1 = 251<sub>10</sub>
+                        <br><br>
+                        1101<sub>8</sub> = 1∙8<sup>3</sup>+1∙8<sup>2</sup>+0∙8<sup>1</sup>+1∙8<sup>0</sup> = 512+64+0+1
+                        = 577<sub>10</sub>
+                        <br><br>
+                        101<sub>16</sub> = 1∙16<sup>2</sup>+0∙16<sup>1</sup>+1∙16<sup>0</sup> = 256+0+1 =
+                        257<sub>10</sub>
+                        <br><br>
+                        251 + 577 - 257 = 571<br><br>
+                        <b>Ответ:</b> 571 <br><br>
+                        <strong>Решение на Python</strong>
+                        <br><br>print(int('11111011', 2) + int('1101',8) - int('101', 16))
+                    </p>
+                </details>
+            </div>
+            <hr class="task-hr">
+
+            <!-- 7 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>7) </b>
+                    Переведите число <b>10010011</b> из двоичной системы счисления в десятичную систему счисления. В
+                    ответе запишите полученное число.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        10010011<sub>2</sub> =
+                        1∙2<sup>7</sup>+0∙2<sup>6</sup>+0∙2<sup>5</sup>+1∙2<sup>4</sup>+0∙2<sup>3</sup>+0∙2<sup>2</sup>+1∙2<sup>1</sup>+1∙2<sup>0</sup>
+                        = 128+0+0+16+0+0+2+1 = 147<sub>10</sub>
+                        <br><br> Результат перевода:<br>
+                        <span color="#ff0000" size="4">10010011<sub>2</sub> = 147<sub>10</sub> </span><br>
+
+                        <b>Ответ:</b> 147
+                    </p>
+                </details>
+            </div>
+            <hr class="task-hr">
+
+            <!-- 8 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>8) </b>
+                    Переведите число 147 из десятичной системы счисления в двоичную систему счисления. Сколько единиц
+                    содержит полученное число?
+                    <br>
+                    В ответе укажите одно число – количество единиц.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary><br>
+                    <table style="border:0px;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">147&nbsp;</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-146&nbsp;
+                                </td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">73</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-72</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">36</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-36</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">18</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-18</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">9</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-8</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">4</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-4</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-2</td>
+                                <td style="text-align:center; width:30px;border-right:0px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="8" style="text-align:right;border:0px #C0C0C0 solid;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <b> <span class="font-oz">1</span>00<span class="font-oz">1</span>00<span class="font-oz">11</span>
+                    </b><br>
+                    <b>Ответ:</b> 4
+                </details>
+            </div>
+            <hr class="task-hr">
+
+            <!-- 9 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>9) </b>
+                    Переведите число 147 из десятичной системы счисления в двоичную систему счисления. Сколько нулей
+                    содержит полученное число?
+                    <br>
+                    В ответе укажите одно число – количество нулей.
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary><br>
+                    <table style="border:0px;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">147&nbsp;</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-146&nbsp;
+                                </td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">73</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-72</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">36</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-36</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">18</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-18</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">9</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-8</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">4</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-4</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-2</td>
+                                <td style="text-align:center; width:30px;border-right:0px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="8" style="text-align:right;border:0px #C0C0C0 solid;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <b> <span class="font-oz">1</span>00<span class="font-oz">1</span>00<span class="font-oz">11</span>
+                    </b><br>
+                    <b>Ответ:</b> 4
+                </details>
+            </div>
+            <hr class="task-hr">
+
+            <!-- 10 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>10) </b>
+                    Переведите число 147 из десятичной системы счисления в двоичную систему счисления. В ответе
+                    укажите это число.<br>
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary><br>
+                    <table style="border:0px;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">147&nbsp;</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-146&nbsp;
+                                </td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">73</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-72</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">36</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-36</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">18</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-18</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">9</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-8</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">4</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-4</td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px; border-bottom:2px solid #000000;">2</td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;border-right:2px solid #000000;">-2</td>
+                                <td style="text-align:center; width:30px;border-right:0px solid #000000;"><b>
+                                        <font color="#ff0000">1</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;border-top:2px solid #000000;"><b>
+                                        <font color="#ff0000">0</font>
+                                    </b></td>
+                                <td style="text-align:center; width:30px;"></td>
+                                <td style="text-align:center; width:30px;"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="8" style="text-align:right;border:0px #C0C0C0 solid;"></td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    <b>Ответ:</b> 10010011
+                </details>
+            </div>
+            <hr class="task-hr">
+
+            <!-- 11 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>11) </b>
+                    Среди приведённых ниже трёх чисел, записанных в различных системах счисления, найдите максимальное и
+                    запишите его в ответе в десятичной системе счисления. В ответе запишите только число, основание
+                    системы счисления указывать не нужно.<br><br>
+                    <span>38<sub>16</sub>, 75<sub>8</sub>, 110100<sub>2</sub>.</span>
+                </p>
+
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>Переведём все числа в десятичную систему счисления:<br><br>
+                        38<sub>16</sub> = 3*16<sup>1</sup> + 8*16<sup>0</sup> = 48 + 8 = 56<sub>10</sub>;<br>
+                        75<sub>8</sub> = 7*8<sup>1</sup> + 5*8<sup>0</sup> = 24 + 2 = 61<sub>10</sub>;<br>
+                        110100<sub>2</sub> = 1*2<sup>5</sup> + 1*2<sup>4</sup> + 0*2<sup>3</sup> + 1*2<sup>2</sup> + 
+                        0*2<sup>1</sup> + 0*2<sup>0</sup> = <br>32 + 16 + 0 + 4 + 0 + 0 = 52<sub>10</sub>.<br><br>
+                        Наибольшим среди этих трёх чисел является число 61.<br>
+                        <b>Ответ: 61</b><br><br>
+                        
+                        <strong>Решение на языке Python</strong><br><br>
+                        def f(x, i):<br>
+                        &emsp;x = int(str(x), i)<br>
+                        &emsp;return x<br>
+                        print(max(f(38, 16), f(75, 8), f(110100, 2)))</p>
+                    </p>
+                </details>
+            </div>
+            <hr class="task-hr">
+            
+            <!-- 12 -->
+            <div class="task-ten">
+                <p class="task-ten__text"><b>12) </b>
+                    Вычислите значение арифметического выражения:<br><br>
+                    <span>10111011<sub>2</sub> + 1011<sub>8</sub> – 101<sub>16</sub></span>
+                </p>
+
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        10111011<sub>2</sub> =
+                        1∙2<sup>7</sup>+0∙2<sup>6</sup>+1∙2<sup>5</sup>+1∙2<sup>4</sup>+1∙2<sup>3</sup>+0∙2<sup>2</sup>+1∙2<sup>1</sup>+1∙2<sup>0</sup>
+                        = 128+0+32+16+8+0+2+1 = 187<sub>10</sub>
+                        <br><br>
+                        1011<sub>8</sub> = 1∙8<sup>3</sup>+0∙8<sup>2</sup>+1∙8<sup>1</sup>+1∙8<sup>0</sup> = 512+0+8+1 =
+                        521<sub>10</sub>
+                        <br><br>
+                        101<sub>16</sub> = 1∙16<sup>2</sup>+0∙16<sup>1</sup>+1∙16<sup>0</sup> = 256+0+1 =
+                        257<sub>10</sub>
+                        <br><br>
+                        187 + 521 - 257 = 451<br><br>
+                        <b>Ответ:</b> 451 <br><br>
+                        <strong>Решение на Python</strong>
+                        <br><br>print(int('10111011', 2) + int('1011',8) - int('101', 16))
+                    </p>
                 </details>
             </div>
             <hr class="task-hr">
