@@ -11,7 +11,7 @@
   font-size: 40px;
 }
 
-.variant-text :is(.variant-text__inner, details summary, details summary p) {
+.variant-text :is(.variant-text__inner, details summary, .variant-text details p) {
   font-size: 22px;
 }
 .variant-text .variant-text__inner {

@@ -15,18 +15,6 @@
     padding: 20px 40px;
     margin: 10px;
   }
-  .var1-text {
-    font-size: 35px;
-  }
-  .var1-Z1 {
-    font-size: 20px;
-  }
-  .var1-Z1 details {
-    margin: 10px 40px;
-  }
-  .var1-Z1 details summary {
-    font-size: 20px;
-  }
 }
 @media (max-width: 800px) {
   .container {
@@ -69,6 +57,9 @@
   }
   hr {
     margin: 10px;
+  }
+  .img-task_4a {
+    width: 550px;
   }
 }
 @media (max-width: 600px) {
@@ -140,7 +131,7 @@
     padding: 10px;
     font-size: 25px;
   }
-  .variant-text :is(.variant-text__inner, b, span, summary, summary p) {
+  .variant-text :is(.variant-text__inner, b, span, summary, .variant-text details p) {
     font-size: 15px;
   }
   .variant-text .variant-text__inner {
@@ -182,6 +173,9 @@
   }
   .img-task_9a {
     width: 350px;
+  }
+  .img-task_4a {
+    width: 370px;
   }
   .table-6 .table-6_td {
     font-weight: normal;
