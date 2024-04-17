@@ -120,13 +120,10 @@
     font-size: 17px;
     padding: 10px 0 0 20px;
   }
-  .task-info_inner {
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;
-  }
-  .task-one {
+  :is(.task-one, .task-three, .task-info_inner) {
     font-size: 15px;
     padding: 10px 20px 10px 20px;
+    text-align: left;
   }
   details summary {
     font-size: 15px;
@@ -158,10 +155,7 @@
   .shifr {
     font-size: 30px;
   }
-  .img-task_9 {
-    width: 320px;
-  }
-  .img-task_9a {
+  :is(.img-task_9, .img-task_9a) {
     width: 320px;
   }
 }/*# sourceMappingURL=media.css.map */

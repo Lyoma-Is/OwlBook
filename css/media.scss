@@ -142,7 +142,6 @@
             }
         }
     }
-
     main{
         .task-block{
                     font-size: 15px;
@@ -165,22 +164,19 @@
         font-size: 17px;
         padding: 10px 0 0 20px;
     }
-    .task-info_inner{
-        padding: 10px 20px 10px 20px;
-        font-size: 15px;
-    }
-    .task-one{
+    
+    :is(.task-one, .task-three, .task-info_inner){
         font-size: 15px;
         padding: 10px 20px 10px 20px;
-        
+        text-align: left;
     }
     
-    details {
+    details { 
         summary{
         font-size: 15px;
         }
     }
-    .variants-block{
+    .variants-block{ 
         .vars-text{
             padding: 15px;
             font-size: 25px;
@@ -211,10 +207,7 @@
     .shifr{
         font-size: 30px;
     }
-    .img-task_9{
+    :is(.img-task_9, .img-task_9a){
         width: 320px;
-    }
-    .img-task_9a{
-        width: 320px;
-    }
+    } 
 }
