@@ -62,6 +62,10 @@ details p {
   margin-top: 15px;
 }
 
+.font-oz {
+  color: red;
+}
+
 .task-info {
   font-size: 23px;
   padding: 20px 0 0 20px;
@@ -111,8 +115,4 @@ details p {
 .task-ten .task-ten__text span {
   display: block;
   text-align: center;
-}
-
-.font-oz {
-  color: red;
 }/*# sourceMappingURL=pageOge.css.map */

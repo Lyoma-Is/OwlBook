@@ -2,17 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 22px;  
 }
 
-.var1-text{
+.variant-title{
     display: flex; 
     justify-content: center; 
     padding: 20px; 
     font-size: 40px;
 }
-.var1-Z{
-    .var1-Z1{
+.variant-text{
+    :is(.variant-text__inner, details summary, details summary p){
+        font-size: 22px;
+    }
+    .variant-text__inner{
         margin: 0 40px;
         text-align: justify;
         span{
@@ -24,12 +26,10 @@
     details{
         margin: 10px 40px;
         summary {
-            font-size: 22px;
             display: block;
             width: fit-content;  
             border-bottom: 1px solid;     
-            cursor: pointer; 
-            
+            cursor: pointer;     
         }
         p{
             margin-top: 15px;
@@ -60,8 +60,7 @@ table, td {
 .table-6{
     .table-6_td{
         font-weight: normal;
-        text-align: left;
-        
+        text-align: left;   
     }
     
 }

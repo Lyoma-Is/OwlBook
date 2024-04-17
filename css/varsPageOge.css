@@ -2,36 +2,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 22px;
 }
 
-.var1-text {
+.variant-title {
   display: flex;
   justify-content: center;
   padding: 20px;
   font-size: 40px;
 }
 
-.var1-Z .var1-Z1 {
+.variant-text :is(.variant-text__inner, details summary, details summary p) {
+  font-size: 22px;
+}
+.variant-text .variant-text__inner {
   margin: 0 40px;
   text-align: justify;
 }
-.var1-Z .var1-Z1 span {
+.variant-text .variant-text__inner span {
   display: flex;
   justify-content: center;
 }
-.var1-Z details {
+.variant-text details {
   margin: 10px 40px;
 }
-.var1-Z details summary {
-  font-size: 22px;
+.variant-text details summary {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
   border-bottom: 1px solid;
   cursor: pointer;
 }
-.var1-Z details p {
+.variant-text details p {
   margin-top: 15px;
 }
 
