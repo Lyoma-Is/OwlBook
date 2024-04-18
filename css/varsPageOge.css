@@ -35,14 +35,12 @@
 .variant-text details p {
   margin-top: 15px;
 }
-.variant-text details .answer-7 {
-  font-size: 25px;
-}
 
 table, td {
+  font-size: 20px;
   border: 1px solid;
   border-collapse: collapse;
-  padding: 10px 15px;
+  padding: 15px 20px;
   margin: auto;
   text-align: center;
   font-weight: 800;
