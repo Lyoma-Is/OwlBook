@@ -155,24 +155,21 @@
   .variant-text details p {
     margin-top: 15px;
   }
+  .variant-text details p .answer-7 {
+    font-size: 20px;
+  }
   table, td {
-    border: 1px solid;
-    border-collapse: collapse;
-    padding: 10px 15px;
-    margin: auto;
-    text-align: center;
-    font-weight: 800;
+    font-size: 12px;
+    padding: 5px 10px;
   }
   .shifr {
     font-size: 35px;
   }
   .img-task_9 {
-    display: block;
-    margin: auto;
-    width: 350px;
+    width: 300px;
   }
   .img-task_9a {
-    width: 350px;
+    width: 300px;
   }
   .img-task_4a {
     width: 370px;
@@ -180,5 +177,9 @@
   .table-6 .table-6_td {
     font-weight: normal;
     text-align: left;
+  }
+  .table-10 td {
+    border: 0px;
+    padding: 5px;
   }
 }/*# sourceMappingURL=media.css.map */
