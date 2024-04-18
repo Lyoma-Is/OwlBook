@@ -87,31 +87,22 @@ details p {
   margin: 0 20px 5px 20px;
 }
 
-.task-one {
+:is(.task-one, .task-three, .task-five, .task-ten) {
   padding: 20px;
   font-size: 20px;
   text-align: justify;
 }
+
 .task-one .task-one__text a {
   color: blue;
   border-bottom: 1px solid;
 }
 
-.task-three {
-  padding: 20px;
-  font-size: 20px;
-  text-align: justify;
-}
 .task-three .task-three__text span {
   display: block;
   text-align: center;
 }
 
-.task-ten {
-  padding: 20px;
-  font-size: 20px;
-  text-align: justify;
-}
 .task-ten .task-ten__text span {
   display: block;
   text-align: center;

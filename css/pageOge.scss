@@ -90,10 +90,13 @@ details{
 // -----------------------------
 
 // tasks-1
-.task-one{
+
+:is(.task-one, .task-three, .task-five, .task-ten){
     padding: 20px;
     font-size: 20px;
     text-align: justify;
+}
+.task-one{
     .task-one__text{
         a{
             color: blue;
@@ -104,9 +107,6 @@ details{
 
 // tasks-3
 .task-three{
-    padding: 20px;
-    font-size: 20px;
-    text-align: justify;
     .task-three__text{
         span{
             display: block;
@@ -115,11 +115,14 @@ details{
     }
 }
 
+// tasks-5
+.task-five{
+    
+}
+
+
 // task-10
 .task-ten{
-    padding: 20px;
-    font-size: 20px;
-    text-align: justify;
     .task-ten__text{
         span{
             display: block;
