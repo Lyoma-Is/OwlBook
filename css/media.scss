@@ -140,7 +140,7 @@
         padding: 10px 20px 0 20px;
     }
     
-    :is(.task-one, .task-three, .task-five, .task-ten, .task-info_inner){
+    :is(.task-one, .task-two, .task-three, .task-nine, .task-five, .task-ten, .task-info_inner){
         font-size: 15px;
         padding: 10px 20px 10px 20px;
         text-align: left;
@@ -150,8 +150,7 @@
         font-size: 20px;
         .task-block_inner{
             padding: 10px;
-        }
-        
+        }    
     }
     details { 
         summary{
@@ -231,6 +230,17 @@
         }
         
     }
+    .task-two{       
+        .shifr{
+            font-size: 20px;
+        }
+        .table-2{
+            td{
+                font-size: 20px;
+            } 
+        }
+    }
+
     .table-10{ 
         td{
             border: 0px; 

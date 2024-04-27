@@ -87,23 +87,26 @@ details p {
   margin: 0 20px 5px 20px;
 }
 
-:is(.task-one, .task-three, .task-five, .task-ten) {
+:is(.task-one, .task-two, .task-three, .task-nine, .task-five, .task-ten) {
   padding: 20px;
   font-size: 20px;
   text-align: justify;
 }
-
-.task-one .task-one__text a {
-  color: blue;
-  border-bottom: 1px solid;
-}
-
-.task-three .task-three__text span {
+:is(.task-one, .task-two, .task-three, .task-nine, .task-five, .task-ten) span {
   display: block;
   text-align: center;
 }
 
-.task-ten .task-ten__text span {
-  display: block;
+.task-two .shifr {
+  font-size: 35px;
+}
+.task-two .table-2 {
+  margin: auto;
+  border-collapse: collapse;
+}
+.task-two .table-2 td {
+  font-size: 25px;
+  border: 1px solid;
+  padding: 5px 10px;
   text-align: center;
 }/*# sourceMappingURL=pageOge.css.map */

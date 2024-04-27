@@ -89,47 +89,71 @@ details{
 }
 // -----------------------------
 
-// tasks-1
 
-:is(.task-one, .task-three, .task-five, .task-ten){
+
+:is(.task-one, .task-two, .task-three, .task-nine, .task-five, .task-ten){
     padding: 20px;
     font-size: 20px;
     text-align: justify;
+    span{
+        display: block;
+        text-align: center;
+    }
 }
-.task-one{
-    .task-one__text{
-        a{
-            color: blue;
-            border-bottom: 1px solid;
-        }
+
+// tasks-1
+
+// .task-one{
+//     .task-one__text{
+//         a{
+//             color: blue;
+//             border-bottom: 1px solid;
+//         }
+//     }
+// }
+
+//task-2
+.task-two{
+    .shifr{
+        font-size: 35px;
+    }
+    .table-2{
+        margin: auto;
+        border-collapse: collapse;
+        td{
+            font-size: 25px;
+            border: 1px solid;
+            padding: 5px 10px;
+            text-align: center;
+        } 
     }
 }
 
 // tasks-3
-.task-three{
-    .task-three__text{
-        span{
-            display: block;
-            text-align: center;
-        }
-    }
-}
+// .task-three{
+//     .task-three__text{
+//         span{
+//             display: block;
+//             text-align: center;
+//         }
+//     }
+// }
 
 // tasks-5
-.task-five{
+// .task-five{
     
-}
+// }
 
 
 // task-10
-.task-ten{
-    .task-ten__text{
-        span{
-            display: block;
-            text-align: center;
-        }
-    }
-}
+// .task-ten{
+//     .task-ten__text{
+//         span{
+//             display: inline;
+//             text-align: center;
+//         }
+//     }
+// }
 
 
 

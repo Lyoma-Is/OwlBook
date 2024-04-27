@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подотовка.ру</title>
+    <link rel="icon" href="../../img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/pageOge.css">
+    <link rel="stylesheet" href="../../css/media.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../../index.html"><img class="logo-img" src="../../img/logo.png" alt="logo"></a>
+                </div>
+                <nav class="header-navbar">
+                    <ul>
+                        <li><a href="../../pages/pageOgeInf.html">Информатика ОГЭ</a></li>
+                        <li><a href="../../pages/pageEgeInf.html">Информатика ЕГЭ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <h3 class="task-info">Задание 9 ОГЭ по информатике. Схема дорог. ФИПИ</h3>
+            <hr class="task-hr__info">
+            <p class="task-info_inner">
+                <b>Задания 9. Алгоритм решения.</b>
+                Количество путей до города X  =  количеству путей, по которым можно добраться в любой
+                из тех городов, из которых есть дорога в Х. <br>
+
+                При этом если путь не должен проходить через какой-то город, нужно просто не учитывать этот город при
+                подсчёте сумм. <br>
+                А если город наоборот обязательно должен лежать на пути, тогда для городов, в которые из
+                нужного города идут дороги, в суммах нужно брать только этот город.
+
+            </p>
+            <hr class="task-hr__info">
+
+            <!-- 1 -->
+            <div class="task-nine">
+                <p class="task-nine__text"><b>1) <a href="https://openfipi.devinf.ru/task/oge_1C837B"
+                            target="_blank"></a></b>
+                    На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж и К. По каждой дороге можно
+                    двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из
+                    города А в город К?
+
+                </p>
+                <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        В задаче идет перечисление, поэтому отнимаем 2 символа (запятой и пробел)<br>
+                        1) Каждый символ кодируется <b>8 битами</b> то есть <b>1 байт</b>. <br>
+                        2) Предложения в данной кодировке оказался на <b>11 байт меньше</b>. <br>
+                        3) Значит: 11 : 1 = 11 символов, с учётом 2 двух символов (запятой и пробел)<br>
+                        4) 11 - 2 = 9 символов то есть картофель<br><br>
+                        <b>Ответ:</b> картофель
+                    </p>
+                </details>
+            </div>
+            <hr class="task-hr">
+
+        </div>
+    </main>
+
+    <!-- <footer>
+
+    </footer> -->
+</body>
+
+</html>
