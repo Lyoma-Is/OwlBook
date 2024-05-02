@@ -179,6 +179,7 @@
         font-size: 25px;
     }
     .variant-text{
+        
         :is(.variant-text__inner, b, span, summary, .variant-text details p ){
             font-size: 15px;
         }
@@ -240,7 +241,13 @@
             } 
         }
     }
-
+    .table-8{
+        td{
+            padding: 15px 0;
+            font-size: 12px;
+        }
+            
+    }
     .table-10{ 
         td{
             border: 0px; 
