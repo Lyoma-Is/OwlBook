@@ -133,7 +133,18 @@
             }
         } 
     }
-
+    #input_answer{
+        padding: 5px;
+        margin-top: 10px;
+        width: 50%;
+        height: 25px;
+        font-size: 12px;
+    }
+    #button{
+        padding: 6px;
+        font-size: 10px;
+        margin-left: 5px;
+    }
     // pageOgeINF
     .task-info{
         font-size: 17px;

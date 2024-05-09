@@ -1,39 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вариант 1 ОГЭ информатика</title>
+    <title>Вариант 7 ОГЭ информатика</title>
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/pageOge.css">
+    <link rel="stylesheet" href="../../css/varsPageOge.css">
+    <link rel="stylesheet" href="../../css/media.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
             <div class="header-top">
                 <div class="logo">
-                <a href="../../index.html"><img class="logo-img" src="../../img/logo.png" alt="logo"></a>
+                    <a href="../../index.html"><img class="logo-img" src="../../img/logo.png" alt="logo"></a>
+                </div>
+                <nav class="header-navbar">
+                    <ul>
+                        <li><a href="../../pages/pageOgeInf.html">Информатика ОГЭ</a></li>
+                        <li><a href="../../pages/pageEgeInf.html">Информатика ЕГЭ</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="header-navbar">
-                <ul>
-                    <li><a href="../../pages/pageOgeInf.html">Информатика ОГЭ</a></li>
-                    <li><a href="../../pages/pageEgeInf.html">Информатика ЕГЭ</a></li>
-                </ul>
-            </nav>
-            </div>
-            
-        </div>        
-        
+
+        </div>
+
     </header>
-    
+
     <main>
         <div class="container">
-            Вариант 7
+            <h2 class="variant-title"> Вариант 7</h2>
+
+            <!-- 1 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"><b>Задание 1.</b>В кодировке КОИ-8 каждый символ кодируется 8 битами.
+                    Ученик написал текст (в нём нет лишних пробелов): <br><br>
+                    «Мои любимые герои мультфильмов: Шрек, Пумба, Маугли, Рататуй, Пиноккио, Винни-Пух, Белоснежка,
+                    Малефисента, Человек-паук, Конёк-Горбунок».<br><br>
+                    Ученик удалил из списка имя героя одного мультфильма, а также лишние запятую и пробел – два пробела
+                    не должны идти подряд.<br>
+                    При этом размер нового предложения в данной кодировке оказался на 16 байт меньше, чем размер
+                    исходного предложения. Напишите в ответе удалённое имя героя мультфильма.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="Конёк-Горбунок" />
+                    <!-- <button id="button">ПРОВЕРИТЬ</button> -->
+                </p>
+
+                <details class="reshenie">
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <b>Ответ:</b> Конёк-Горбунок
+                    </p>
+                </details>
+            </section>
+            <hr>
+
+            <!-- 2 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 2.</b> Валя шифрует русские слова, записывая вместо каждой буквы её код. Коды букв даны в таблице.</p><br>
+
+                <table>
+                    <thead>
+                        <tr class="tr__head">
+                            <td>А</td>
+                            <td>В</td>
+                            <td>Д</td>
+                            <td>О</td>
+                            <td>Р</td>
+                            <td>У</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr__body">
+                            <td>01</td>
+                            <td>011</td>
+                            <td>100</td>
+                            <td>111</td>
+                            <td>010</td>
+                            <td>001</td>
+                        </tr>
+
+                    </tbody>
+
+                </table><br>
+                <p class="variant-text__inner">Некоторые кодовые цепочки можно расшифровать несколькими способами. Например, 00101001 может означать не только УРА, но и УАУ.<br><br>
+                    Даны три кодовые цепочки:<br>
+                    01001001<br>
+                    100011111010<br>
+                    10011101001<br><br>
+                    Найдите среди них ту, которая имеет только одну расшифровку, и запишите в ответе расшифрованное слово.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="ДВОР" />
+                    <button id="button">ПРОВЕРИТЬ</button>
+                </p>
+                <details class="reshenie">
+                    <summary><b>Решение</b></summary>
+                        <b>Ответ:</b> ДВОР
+                    </p>
+                </details> 
+            </section>
+            <hr>
+
+            <!-- 3 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"><b>Задание 3.</b> Напишите натуральное число x, для которого <b>ЛОЖНО</b>
+                    высказывание:<br><br>
+                    <span>(X < 8) ИЛИ НЕ (X < 9).</span>
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p> Так как высказывание должно быть ложным, то меняем знаки там где нет <b>НЕ</b>,
+                        то есть меняем высказывание с ложного на истинное<br><br>
+                        Было: (x < 4) ИЛИ НЕ (x < 5) – высказывание ложно<br><br>
+                            Стало: (x >= 4) И (x < 5) – высказывание истинно<br><br>
+                                <b>Ответ:</b> 4
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 4 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"><b>Задание 4.</b> Между населёнными пунктами A, B, C, D, E построены
+                    дороги, протяжённость которых приведена в таблице.</p><br>
+                <table>
+                    <tr>
+                        <td style="text-align: center; background-color: #ffbf80;"></td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td style="text-align: center; background-color: #ffbf80;"></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>1</td>
+                        <td style="text-align: center; background-color: #ffbf80;"></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td></td>
+                        <td></td>
+                        <td style="text-align: center; background-color: #ffbf80;"></td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td style="text-align: center; background-color: #ffbf80;"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td></td>
+                        <td style="text-align: center; background-color: #ffbf80;"></td>
+                    </tr>
+                </table>
+                <br>
+                <p class="variant-text__inner">Определите длину кратчайшего пути между пунктами A и С. Передвигаться
+                    можно только по дорогам, указанным в таблице. Каждый пункт можно
+                    посетить
+                    только один раз.<br>
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <img class="img-task_4a" src="../../img/task4/v1_task4_1_11.png" alt="task4_1_11">
+                    <p>
+                        Найдем все варианты маршрутов из A в F и выберем самый короткий.<br><br>
+                        Из пункта A можно попасть в пункт B, C, F.<br>
+                        Из пункта B можно попасть в пункты C.<br>
+                        Из пункта C можно попасть в пункт D, E.<br>
+                        Из пункта D можно попасть в пункт F.<br>
+                        Из пункта E можно попасть в пункт F.<br><br>
+                        A—F: длина маршрута 15км.<br>
+                        A—B—C—E—F: длина маршрута 11км.<br>
+                        A—B—C—D—F: длина маршрута 11км.<br>
+                        A—C—E—F: длина маршрута 12км.<br><br>
+                        Самый короткий путь: A—B—C—D—F. Длина маршрута 11км.<br><br>
+                        <b>Ответ:</b> 11
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 5 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 5. </b>
+                    У исполнителя Квадратор две команды, которым присвоены номера:<br><br>
+                    <b>1. возведи в квадрат</b><br>
+                    <b>2. вычти 3</b><br><br>
+                    Первая из них возводит число на экране во вторую степень, вторая вычитает из числа 3. Исполнитель
+                    работает только с натуральными числами.<br>
+                    Составьте алгоритм получения из числа 14 числа 58, содержащий не более <b>5 команд</b>. <br>
+                    В ответе запишите только номера команд.<br>
+
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        Нужно составить алгоритм чтобы получить из числа 89 число 24.<br>
+                        Смотрим<br>
+                        <b>89</b><br> делится на 2, нет, поэтому прибавляем 1<br><br>
+                        прибавь 1 = 90 <b>(2 команда)</b><br><br> 90 делится на 2, да, поэтому делим на 2 и т.
+                        д.<br><br>
+                        раздели на 2 = 45 <b>(1 команда)</b><br><br>
+                        прибавь 1 = 46 <b>(2 команда)</b><br><br>
+                        раздели на 2 = 23 <b>(1 команда)</b><br><br>
+                        прибавь 1 = 24 <b>(2 команда)</b><br><br>
+                        <b>24</b><br><br>
+                        Из числа 89 получили число 24, в ответе записываем номера команд из условия задачи.<br><br>
+                        <b>Ответ:</b> 21212
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 6 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 6. </b> Ниже приведена программа, записанная на пяти языках
+                    программирования. </p><br>
+                <table class="table-6">
+                    <tr style="background-color: #ffbf80;">
+                        <td>Бейсик</td>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td class="table-6_td">
+                            DIM k, s AS INTEGER<br>
+                            &emsp;INPUT s<br>
+                            &emsp;INPUT k<br>
+                            &emsp;IF s MOD 7 = k THEN<br>
+                            &emsp;&emsp;PRINT "YES"<br>
+                            &emsp;ELSE<br>
+                            &emsp;&emsp;PRINT "NO"<br>
+                            &emsp;END IF</td>
+
+                        <td class="table-6_td">
+                            s = int(input())<br>
+                            k = int(input())<br>
+                            if s % 7 == k:<br>
+                            &emsp;print("YES")<br>
+                            else:<br>
+                            &emsp;print("NO")<br>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #ffbf80;">
+                        <td>Паскаль</td>
+                        <td>Алгоритмический язык</td>
+                    </tr>
+                    <tr>
+                        <td class="table-6_td">
+                            var s, k: integer;<br>
+                            begin <br>
+                            &emsp;readln(s);<br>
+                            &emsp;readln(k);<br>
+                            &emsp;if s mod 7 = k<br>
+                            &emsp;&emsp;then writeln ('YES')<br>
+                            &emsp;&emsp;else writeln ('NO')<br>
+                            end.<br>
+                        </td>
+                        <td class="table-6_td">алг<br>
+                            нач <br>
+                            цел s, k<br>
+                            ввод s<br>
+                            ввод k<br>
+                            если mod(s, 7) = k<br>
+                            &emsp;то вывод "YES"<br>
+                            &emsp;иначе вывод "NO"<br>
+                            все <br>
+                            кон<br>
+
+                        </td>
+                    </tr>
+                    <tr style="background-color: #ffbf80;">
+                        <td scope="row" colspan="2">С++</td>
+                    </tr>
+                    <tr>
+                        <td class="table-6_td" scope="row" colspan="2">#include <iostream><br>
+                                using namespace std;<br>
+                                int main() {<br>
+                                &emsp;int s, k;
+                                &emsp;cin >> s;<br>
+                                &emsp;cin >> k;<br>
+                                &emsp;if (s % 7 == k)<br>
+                                &emsp;&emsp;cout << "YES" ;<br>
+                                    &emsp;else <br>
+                                    &emsp;&emsp;cout << "NO" ;<br>
+                                        &emsp;return 0;<br>
+                                        }<br>
+
+                        </td>
+                    </tr>
+                </table><br>
+                <p class="variant-text__inner"> Было проведено 9 запусков программы, при которых в качестве значений
+                    переменных s и k вводились следующие пары чисел:<br><br>
+                    <span>(2, 2); (7, 0); (14, 10); (22, 1); (10, 3); (12, 1); (9, 2); (5, 1); (2, 5).</span>
+                    <br>Сколько было запусков, при которых программа напечатала «YES»?
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        Заметим, что программа напечатает «ДА», если переменная k будет равна результату целочисленного
+                        деления s на 2, то есть делится нацело. В качестве значений переменных s и k в этих случаях
+                        вводились
+                        следующие пары чисел: <br><br>
+                        <span style="display: block; text-align: center;">(8, 4); (7, 3); (10, 5); (1, 0).</span>
+                        8 / 2 = 4<br>
+                        7 / 2 = 3<br>
+                        10 / 2 = 5<br>
+                        1 / 2 = 0<br>
+                        <br><b>Ответ:</b> 4
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 7 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 7. </b>
+                    Доступ к файлу <b>com.htm</b>, находящемуся на сервере <b>txt.ru</b>, осуществляется по протоколу
+                    <b>http</b>. Фрагменты адреса файла закодированы цифрами от 1 до 7. Запишите последовательность этих
+                    цифр, кодирующую адрес
+                    указанного файла в сети Интернет.<br><br>
+                    1) txt<br>
+                    2) http<br>
+                    3) .htm<br>
+                    4) .ru<br>
+                    5) /<br>
+                    6) ://<br>
+                    7) сom<br>
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <b class="answer-7">Протокол :// Сервер / Файл</b><br><br>
+                        <b class="answer-7">ftp :// text.net / ftp.jpg</b><br><br>
+                        <b>Ответ:</b> 5471632
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 8 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 8. </b>В языке запросов поискового сервера для
+                    обозначения логической операции «ИЛИ» используется символ «|», а для логической операции «И» –
+                    символ «&amp;».<br>В таблице приведены запросы и количество найденных по ним страниц некоторого
+                    сегмента сети Интернет.</p><br>
+                <table>
+                    <tbody>
+                        <tr style="text-align: center; background-color: #ffbf80;">
+                            <td><strong>Запрос</strong></td>
+                            <td><strong>Найдено страниц (в сотнях тысяч)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><em>Ухо</em></td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td><em>Подкова</em></td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td><em>Наковальня</em></td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td><em>Ухо | Подкова | Наковальня</em></td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td><em>Ухо &amp; Наковальня</em></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><em>Ухо &amp; Подкова</em></td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <p class="variant-text__inner">Какое количество страниц (в тысячах) будет найдено по запросу
+                    <em>Подкова & Наковальня</em>?<br><br>Считается, что все запросы выполнялись практически
+                    одновременно,
+                    так что набор
+                    страниц, содержащих все искомые слова, не изменялся за время выполнения запросов.
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        В таблице запросов видим что есть два запроса <em> Пшеница и Овёс</em>.<br><br>
+                        Смотрим и в первой и во второй строке видим что есть знаки операции: символ «|» и символ «&», в
+                        третьей строке
+                        нет знаков операции.<br><br>
+                        Поэтому складываем Первый и Второй запрос и отнимаем Третий.<br><br>
+                        ( Пшеница | Овёс ) + ( Пшеница & Овёс ) - ( Пшеница ) <br><br>
+                        6400 + 550 - 4300 = 2650<br>
+
+                        <br><b>Ответ:</b> 2650
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 9 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 9. </b>
+                    На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К и Л. По каждой дороге
+                    можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей
+                    из города А в город Л?<br><br>
+                    <img class="img-task_9" src="../../img/task9/v6_task9_584324.png" alt="task9_1">
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <img class="img-task_9a" src="../../img/task9/v1_9_1_12.png" alt="v1_9_1_12"><br>
+                        <b>Ответ:</b> 12
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 10 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 10. </b>
+                    Переведите число 126 из десятичной системы счисления в двоичную систему счисления.<br><br>
+                    <b>1)</b> В ответе укажите двоичное число. Основание системы счисления указывать не нужно.<br><br>
+                    <b>2)</b> Сколько единиц содержит полученное число? В ответе укажите одно число – количество
+                    единиц.<br><br>
+                    <b>3)</b> Сколько нулей содержит полученное число? В ответе укажите одно число – количество
+                    нулей.<br><br>
+
+                    <b>4)</b> Переведите число 11001001 из двоичной системы счисления в десятичную систему счисления.
+                    В ответе напишите полученное число.
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p>
+                        <img src="../../img/task10/v1_task10_1_4.png" alt="v1_task10_1_4"><br><br>
+                        Пишем остатки в обратном порядке: <b style="color: red;">11</b>0<b style="color: red;">1</b>00<b
+                            style="color: red;">1</b><br>
+                        В ответе нужно указать сколько единиц в двоичной записи<b><br><br>Ответ:</b> 4
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 11 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 11. </b>
+                    В одном из произведений А.С. Пушкина, текст которого приведён в подкаталоге каталога Проза, есть
+                    героиня Палашка.<br>
+                    С помощью поисковых средств операционной системы и текстового редактора или браузера выясните
+                    название профессии этой женщины.
+                </p>
+                <!-- <details>
+                    <summary><b>Решение</b></summary>
+                    <p> Открываем каталог. Заходим в папку Гончаров. В строку поиска вводим фамилию Волков. Выдает
+                        произведение Обломов. Открываем любой файл Обломов. Ctrl + F либо Поиск. <br><br>
+                        Ищем слово искусств (именно в таком обрезанном виде, чтобы найти все формы слова). <br><br>
+                        Нашли: "– Ну, посещайте Мездровых, – перебил Волков, – там уж об одном говорят, об
+                        искусствах"<br><br>
+                        <b>Ответ:</b> МЕЗДРОВ
+                    </p>
+                </details> -->
+            </section>
+            <hr>
+
+            <!-- 12 -->
+            <section class="variant-text">
+                <p class="variant-text__inner"> <b>Задание 12. </b>
+                    Сколько файлов c расширением pdf объёмом не менее 1 Мб каждый содержится в подкаталогах каталога
+                    DEMO-12?<br> В ответе
+                    укажите только число.
+                </p>
+
+            </section>
+            <hr><br>
+
+            <!-- OTVETY -->
+            <section class="variant-text">
+                <details>
+                    <summary><b>Ответы на задания</b></summary>
+                    <p>
+                        <b>1) </b> раскладушка<br>
+                        <b>2) </b> леска<br>
+                        <b>3) </b> 8<br>
+                        <b>4) </b> 3<br>
+                        <b>5) </b> 22122<br>
+                        <b>6) </b> 5<br>
+                        <b>7) </b> 2614573<br>
+                        <b>8) </b> 4280<br>
+                        <b>9) </b> 24<br>
+                        <b>10.1) </b>10001100<br>
+                        <b>10.2) </b>3<br>
+                        <b>10.3) </b>5<br>
+                        <b>10.4) </b>201<br>
+                        <b>11) </b> Прачка<br>
+                        <b>12) </b> 13<br>
+                    </p>
+                </details><br><br>
+            </section>
         </div>
-        
     </main>
 
     <!-- <footer>
 
     </footer> -->
+    <script src="../../js/getResult.js"></script>
 </body>
+
 </html>
