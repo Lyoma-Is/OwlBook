@@ -146,6 +146,25 @@ main{
     display: block;
     margin: 0 auto;
 }
+
+.answer_bg-green{
+    background-color: #c0ffc0;
+}
+.answer_bg-red{
+    background-color: #ffc0c0;
+}
+.answer_td{
+    width: 190px;
+}
+.answer_table-border{
+    border-left: 0;
+    border-right: 0;
+}
+.centerResult{
+    text-align: center;
+    font-size: 25px;
+    padding: 25px 0;
+}
 // footer{
 //     height: 120px;
 //     background-color: rgb(34, 36, 36);

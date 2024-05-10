@@ -3,12 +3,15 @@ let inputs = document.querySelectorAll('#input_answer');
 let resh = document.querySelector('.reshenie');
 let input = document.querySelector('#input_answer');
 
-let arrayInput = []
+let arrayInput = [];
+let arrayAnswer = [];
 
+let countReset = 0;
 let button = document.querySelector('#button');
 button.addEventListener('click', function (){
     let inputs = document.querySelectorAll('#input_answer');
     let countResult = 0;
+
     for (let input of inputs){
         
        // resh.classList.remove('reshenie');
@@ -16,7 +19,7 @@ button.addEventListener('click', function (){
         input.classList.remove('input_answer');
         input.classList.remove('input_answer-red');
         
-        if (input.value == input.dataset.right){
+        if (input.value.toUpperCase() == input.dataset.right.toUpperCase()){
 
             input.classList.add('input_answer-green');
             
@@ -25,12 +28,82 @@ button.addEventListener('click', function (){
             input.classList.add('input_answer-red');
         }
     }
-    console.log(countResult)
+    let pResult = document.createElement('p')
+    pResult.classList.add("centerResult")
+    
+    if (countResult < 5){
+        pResult.textContent = "Ваша оценка: 2 |  Количество баллов: " + countResult + " из " + inputs.length
+
+    } else if (4 < countResult && countResult < 11){
+        pResult.textContent = "Ваша оценка: 3 |  Количество баллов: " + countResult + " из " + inputs.length 
+
+    } else if (10 < countResult && countResult < 16){
+        pResult.textContent = "Ваша оценка: 4 |  Количество баллов: " + countResult + " из " + inputs.length 
+
+    } else{
+        pResult.textContent = "Ваша оценка: 5 |  Количество баллов: " + countResult + " из " + inputs.length 
+    }
+
+    
+    for (let i = 0; i < inputs.length; i++){
+        arrayInput.push(inputs[i].value);
+        arrayAnswer.push(inputs[i].dataset.right)
+    }
+
+    let table = document.createElement("table");
+    for (let i = 0; i < inputs.length; i++){
+        let row = document.createElement("tr");
+
+        let cell = document.createElement("td");
+        cell.textContent = i+1;
+        row.appendChild(cell);
+        cell.classList.add('answer_table-border')
+
+        cell = document.createElement("td");
+        cell.textContent = arrayInput[i];
+        row.appendChild(cell);
+        cell.classList.add("answer_td")
+        cell.classList.add('answer_table-border')
+
+        if (arrayInput[i].toUpperCase() == arrayAnswer[i].toUpperCase()){
+            cell.classList.add('answer_bg-green')
+        } else if(arrayInput[i] == ""){
+            
+        } else{
+            cell.classList.add('answer_bg-red')
+        }
+
+        cell = document.createElement("td");
+        cell.textContent = arrayAnswer[i];
+        row.appendChild(cell);
+        cell.classList.add('answer_table-border')
+
+        table.appendChild(row);
+    }
+
+    let ansRes = document.getElementById("answer_results");
+    ansRes.appendChild(pResult)
+    ansRes.appendChild(table);
+    
+    countReset += 1;
+    
+    if (countReset == 2){
+        while (ansRes.firstChild) {
+            ansRes.removeChild(ansRes.firstChild);
+        }    
+        countReset = 0
+    }
+    
+
+    for (let i = 0; i < inputs.length; i++){
+        arrayInput.pop(inputs[i].value);
+        arrayAnswer.pop(inputs[i].dataset.right)
+    }
+
+
+    console.log(arrayInput)
+    console.log(arrayAnswer)
+    console.log(countResult, countReset)
 });
 
-function GetInputs(){
-    for (let x = 0; x < input.lenght; x++){
-        arrayInput.append(input[x])
-    }
-}
-console.log(arrayInput)
+
