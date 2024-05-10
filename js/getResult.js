@@ -3,13 +3,15 @@ let inputs = document.querySelectorAll('#input_answer');
 let resh = document.querySelector('.reshenie');
 let input = document.querySelector('#input_answer');
 
+let arrayInput = []
+
 let button = document.querySelector('#button');
 button.addEventListener('click', function (){
     let inputs = document.querySelectorAll('#input_answer');
     let countResult = 0;
     for (let input of inputs){
         
-        resh.classList.remove('reshenie');
+       // resh.classList.remove('reshenie');
         input.classList.remove('input_answer-green');
         input.classList.remove('input_answer');
         input.classList.remove('input_answer-red');
@@ -21,8 +23,14 @@ button.addEventListener('click', function (){
             countResult += 1
         } else{
             input.classList.add('input_answer-red');
-            countResult -= 1
         }
     }
     console.log(countResult)
 });
+
+function GetInputs(){
+    for (let x = 0; x < input.lenght; x++){
+        arrayInput.append(input[x])
+    }
+}
+console.log(arrayInput)

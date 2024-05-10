@@ -49,12 +49,12 @@
                     <!-- <button id="button">ПРОВЕРИТЬ</button> -->
                 </p>
 
-                <details class="reshenie">
+                <!-- <details class="reshenie">
                     <summary><b>Решение</b></summary>
                     <p>
                         <b>Ответ:</b> Конёк-Горбунок
                     </p>
-                </details>
+                </details> -->
             </section>
             <hr>
 
@@ -93,21 +93,22 @@
                     10011101001<br><br>
                     Найдите среди них ту, которая имеет только одну расшифровку, и запишите в ответе расшифрованное слово.<br>
                     <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="ДВОР" />
-                    <button id="button">ПРОВЕРИТЬ</button>
                 </p>
-                <details class="reshenie">
+                <!-- <details class="reshenie">
                     <summary><b>Решение</b></summary>
                         <b>Ответ:</b> ДВОР
                     </p>
-                </details> 
+                </details>  -->
             </section>
             <hr>
 
             <!-- 3 -->
             <section class="variant-text">
-                <p class="variant-text__inner"><b>Задание 3.</b> Напишите натуральное число x, для которого <b>ЛОЖНО</b>
+                <p class="variant-text__inner"><b>Задание 3.</b> Определите количество натуральных чисел x, для которых <b>ИСТИННО</b>
                     высказывание:<br><br>
-                    <span>(X < 8) ИЛИ НЕ (X < 9).</span>
+                    <span>(НЕ (x ≥ 15) И НЕ (x < 8)) И (x нечётное).</span>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="3" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -137,49 +138,48 @@
                     <tr>
                         <td>A</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td>2</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>9</td>
                     </tr>
                     <tr>
                         <td>B</td>
-                        <td>1</td>
+                        <td>3</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
                         <td></td>
-                        <td>1</td>
-                        <td>2</td>
+                        <td>4</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>C</td>
-                        <td></td>
+                        <td>9</td>
                         <td></td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
                         <td>2</td>
-                        <td>1</td>
+                        <td>2</td>
                     </tr>
                     <tr>
                         <td>D</td>
-                        <td></td>
-                        <td>1</td>
+                        <td>8</td>
+                        <td>4</td>
                         <td>2</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
-                        <td></td>
+                        <td>5</td>
                     </tr>
                     <tr>
                         <td>E</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>1</td>
+                        <td>9</td>
                         <td></td>
+                        <td>2</td>
+                        <td>5</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
                     </tr>
                 </table>
                 <br>
-                <p class="variant-text__inner">Определите длину кратчайшего пути между пунктами A и С. Передвигаться
-                    можно только по дорогам, указанным в таблице. Каждый пункт можно
-                    посетить
-                    только один раз.<br>
+                <p class="variant-text__inner">Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт D. Передвигаться можно только по дорогам, указанным в таблице. Каждый пункт можно посетить только один раз.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="11" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -205,14 +205,14 @@
             <!-- 5 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 5. </b>
-                    У исполнителя Квадратор две команды, которым присвоены номера:<br><br>
-                    <b>1. возведи в квадрат</b><br>
-                    <b>2. вычти 3</b><br><br>
-                    Первая из них возводит число на экране во вторую степень, вторая вычитает из числа 3. Исполнитель
-                    работает только с натуральными числами.<br>
-                    Составьте алгоритм получения из числа 14 числа 58, содержащий не более <b>5 команд</b>. <br>
+                    У исполнителя Раздвоитель две команды, которым присвоены номера:<br><br>
+                    <b>1. вычесть 1</b><br>
+                    <b>2. разделить на 2</b><br><br>
+                    Первая из них уменьшает число, записанное на экране, на 1, вторая делит его на 2.<br>
+                    Составьте алгоритм получения из числа 21 числа 3, содержащий не более <b>5 команд</b>. <br>
                     В ответе запишите только номера команд.<br>
-
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                    data-right="12211" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -245,22 +245,24 @@
                     </tr>
                     <tr>
                         <td class="table-6_td">
-                            DIM k, s AS INTEGER<br>
+                            DIM k, s, A AS INTEGER<br>
                             &emsp;INPUT s<br>
                             &emsp;INPUT k<br>
-                            &emsp;IF s MOD 7 = k THEN<br>
-                            &emsp;&emsp;PRINT "YES"<br>
-                            &emsp;ELSE<br>
-                            &emsp;&emsp;PRINT "NO"<br>
-                            &emsp;END IF</td>
+                            &emsp;INPUT A<br>
+                            &emsp;IF s > 10 OR t > А THEN<br>
+                                &emsp;&emsp;PRINT "YES"<br>
+                                &emsp;ELSE<br>
+                                &emsp;&emsp;PRINT "NO"<br>
+                                &emsp;END IF</td>
 
                         <td class="table-6_td">
                             s = int(input())<br>
                             k = int(input())<br>
-                            if s % 7 == k:<br>
-                            &emsp;print("YES")<br>
-                            else:<br>
-                            &emsp;print("NO")<br>
+                            A = int(input())<br>
+                            if (s > 10) or (t > А):<br>
+                                &emsp;print("YES")<br>
+                                else:<br>
+                                &emsp;print("NO")<br>
                         </td>
                     </tr>
                     <tr style="background-color: #ffbf80;">
@@ -269,25 +271,27 @@
                     </tr>
                     <tr>
                         <td class="table-6_td">
-                            var s, k: integer;<br>
+                            var s, k, A: integer;<br>
                             begin <br>
                             &emsp;readln(s);<br>
                             &emsp;readln(k);<br>
-                            &emsp;if s mod 7 = k<br>
-                            &emsp;&emsp;then writeln ('YES')<br>
-                            &emsp;&emsp;else writeln ('NO')<br>
-                            end.<br>
+                            &emsp;readln(A);<br>
+                            &emsp;if (s > 10) or (t > А)<br>
+                                &emsp;&emsp;then writeln ('YES')<br>
+                                &emsp;&emsp;else writeln ('NO')<br>
+                                end.<br>
                         </td>
                         <td class="table-6_td">алг<br>
                             нач <br>
-                            цел s, k<br>
+                            цел s, k, A<br>
                             ввод s<br>
                             ввод k<br>
-                            если mod(s, 7) = k<br>
-                            &emsp;то вывод "YES"<br>
-                            &emsp;иначе вывод "NO"<br>
-                            все <br>
-                            кон<br>
+                            ввод A<br>
+                            если s > 10 или t > А<br>
+                                &emsp;то вывод "YES"<br>
+                                &emsp;иначе вывод "NO"<br>
+                                все <br>
+                                кон<br>
 
                         </td>
                     </tr>
@@ -298,23 +302,26 @@
                         <td class="table-6_td" scope="row" colspan="2">#include <iostream><br>
                                 using namespace std;<br>
                                 int main() {<br>
-                                &emsp;int s, k;
+                                &emsp;int s, k, A;
                                 &emsp;cin >> s;<br>
                                 &emsp;cin >> k;<br>
-                                &emsp;if (s % 7 == k)<br>
-                                &emsp;&emsp;cout << "YES" ;<br>
-                                    &emsp;else <br>
-                                    &emsp;&emsp;cout << "NO" ;<br>
-                                        &emsp;return 0;<br>
-                                        }<br>
+                                &emsp;cin >> A;<br>
+                                &emsp;if (s > 10 || t > А)<br>
+                                    &emsp;&emsp;cout << "YES" ;<br>
+                                        &emsp;else <br>
+                                        &emsp;&emsp;cout << "NO" ;<br>
+                                            &emsp;return 0;<br>
+                                            }<br>
 
                         </td>
                     </tr>
                 </table><br>
                 <p class="variant-text__inner"> Было проведено 9 запусков программы, при которых в качестве значений
                     переменных s и k вводились следующие пары чисел:<br><br>
-                    <span>(2, 2); (7, 0); (14, 10); (22, 1); (10, 3); (12, 1); (9, 2); (5, 1); (2, 5).</span>
-                    <br>Сколько было запусков, при которых программа напечатала «YES»?
+                    <span>(1, 2); (11, 2); (1, 12); (11, 12); (–11, –12); (–11, 12); (–12, 11); (10, 10); (10, 5).</span><br>
+                    Укажите целое значение параметра А, при котором для указанных входных данных программа напечатает «NO» пять раз.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="11" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -337,17 +344,18 @@
             <!-- 7 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 7. </b>
-                    Доступ к файлу <b>com.htm</b>, находящемуся на сервере <b>txt.ru</b>, осуществляется по протоколу
+                    Доступ к файлу <b>edu.txt</b>, находящемуся на сервере <b>htm.ru</b>, осуществляется по протоколу
                     <b>http</b>. Фрагменты адреса файла закодированы цифрами от 1 до 7. Запишите последовательность этих
-                    цифр, кодирующую адрес
-                    указанного файла в сети Интернет.<br><br>
-                    1) txt<br>
-                    2) http<br>
-                    3) .htm<br>
-                    4) .ru<br>
-                    5) /<br>
-                    6) ://<br>
-                    7) сom<br>
+                    цифр, кодирующую адрес указанного файла в сети Интернет.<br><br>
+                    1) htm<br>
+                    2) ://<br>
+                    3) /<br>
+                    4) http<br>
+                    5) .ru<br>
+                    6) .txt<br>
+                    7) edu<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="4215376" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -403,6 +411,8 @@
                     одновременно,
                     так что набор
                     страниц, содержащих все искомые слова, не изменялся за время выполнения запросов.
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="20" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -424,10 +434,11 @@
             <!-- 9 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 9. </b>
-                    На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К и Л. По каждой дороге
-                    можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей
-                    из города А в город Л?<br><br>
-                    <img class="img-task_9" src="../../img/task9/v6_task9_584324.png" alt="task9_1">
+                    На рисунке – схема дорог, связывающих города A, B, C, D, E, F, G.
+По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из города A в город G?<br><br>
+                    <img class="img-task_9" src="../../img/task9/v7_task9_318704.png" alt="task9_1">
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="7" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -441,16 +452,11 @@
 
             <!-- 10 -->
             <section class="variant-text">
-                <p class="variant-text__inner"> <b>Задание 10. </b>
-                    Переведите число 126 из десятичной системы счисления в двоичную систему счисления.<br><br>
-                    <b>1)</b> В ответе укажите двоичное число. Основание системы счисления указывать не нужно.<br><br>
-                    <b>2)</b> Сколько единиц содержит полученное число? В ответе укажите одно число – количество
-                    единиц.<br><br>
-                    <b>3)</b> Сколько нулей содержит полученное число? В ответе укажите одно число – количество
-                    нулей.<br><br>
-
-                    <b>4)</b> Переведите число 11001001 из двоичной системы счисления в десятичную систему счисления.
-                    В ответе напишите полученное число.
+                <p class="variant-text__inner"> <b>Задание 10.</b> 
+                    Запишите десятичное число 69 в двоичной системе счисления. В ответе укажите это число.<br>
+                    
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="1000101" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -467,10 +473,10 @@
             <!-- 11 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 11. </b>
-                    В одном из произведений А.С. Пушкина, текст которого приведён в подкаталоге каталога Проза, есть
-                    героиня Палашка.<br>
-                    С помощью поисковых средств операционной системы и текстового редактора или браузера выясните
-                    название профессии этой женщины.
+                    В одном из произведений А.П. Чехова, текст которого приведён в подкаталоге каталога Проза, есть герой с фамилией Елдырин.<br>
+                    С помощью поисковых средств операционной системы и текстового редактора или браузера выясните должность этого героя.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="Городовой" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -488,16 +494,27 @@
             <!-- 12 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 12. </b>
-                    Сколько файлов c расширением pdf объёмом не менее 1 Мб каждый содержится в подкаталогах каталога
-                    DEMO-12?<br> В ответе
-                    укажите только число.
+                    Сколько файлов c расширением rtf объёмом более 40 960 байт каждый содержится в подкаталогах каталога DEMO-12? В ответе укажите только число.<br> В ответе укажите только число.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ"
+                        data-right="18" />
                 </p>
 
             </section>
             <hr><br>
 
-            <!-- OTVETY -->
+            <!-- проверка -->
             <section class="variant-text">
+                <button id="button">ПРОВЕРИТЬ</button>
+
+                <details class="answer_results">
+                    <summary></summary>
+                    
+                
+                </details>
+            </section><hr><br>
+            
+            <!-- OTVETY -->
+            <!-- <section class="variant-text">
                 <details>
                     <summary><b>Ответы на задания</b></summary>
                     <p>
@@ -518,7 +535,7 @@
                         <b>12) </b> 13<br>
                     </p>
                 </details><br><br>
-            </section>
+            </section> -->
         </div>
     </main>
 

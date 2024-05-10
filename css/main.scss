@@ -76,12 +76,13 @@ main{
                 padding: 20px;
                 border-radius: 50px;
                 transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color: $back-top-color;
+                    transition: all 0.3s ease-in-out;
+                    
+                }
             }
-            &:hover{
-                background-color: $back-top-color;
-                transition: all 0.3s ease-in-out;
-                
-            }
+            
         }
     }
 }
@@ -140,8 +141,10 @@ main{
     display: none;
 }
 #button{
-    padding: 7px;
-    margin-left: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 // footer{
 //     height: 120px;
