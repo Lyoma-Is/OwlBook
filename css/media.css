@@ -111,6 +111,13 @@
     font-size: 15px;
     padding: 0 0 20px 0;
   }
+  .variants-block .vars .var {
+    margin: 0 8px;
+  }
+  .variants-block .vars .var a {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
   .task-info {
     font-size: 17px;
     padding: 10px 20px 0 20px;

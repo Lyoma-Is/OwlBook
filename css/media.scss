@@ -133,18 +133,7 @@
             }
         } 
     }
-    // #input_answer{
-    //     padding: 5px;
-    //     margin-top: 10px;
-    //     width: 50%;
-    //     height: 25px;
-    //     font-size: 12px;
-    // }
-    // #button{
-    //     padding: 6px;
-    //     font-size: 10px;
-    //     margin-left: 5px;
-    // }
+
     #input_answer{
         padding: 5px;
         margin-top: 10px;
@@ -161,7 +150,21 @@
         font-size: 15px;
         padding: 0 0 20px 0;
     }
+    
     // pageOgeINF
+
+    .variants-block{
+        .vars{
+            .var{
+                margin: 0 8px;
+                a{
+                    font-size: 13px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
     .task-info{
         font-size: 17px;
         padding: 10px 20px 0 20px;
@@ -172,6 +175,7 @@
         padding: 10px 20px 10px 20px;
         text-align: left;
     }
+
     .task-block{
         padding-left: 10px;
         font-size: 20px;
@@ -199,6 +203,7 @@
     :is(.img-task_9, .img-task_9a){
         width: 320px;
     } 
+
 
     // variant-text
     .variant-title{

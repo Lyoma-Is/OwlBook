@@ -94,16 +94,10 @@ button.addEventListener('click', function (){
         countReset = 0
     }
     
-
     for (let i = 0; i < inputs.length; i++){
         arrayInput.pop(inputs[i].value);
         arrayAnswer.pop(inputs[i].dataset.right)
     }
-
-
-    console.log(arrayInput)
-    console.log(arrayAnswer)
-    console.log(countResult, countReset)
 });
 
 
