@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;  
+    
 }
 
 $back-top-color:  rgb(233, 199, 105);
@@ -14,6 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
+    
 }
 li {
     list-style: none;
@@ -34,7 +36,7 @@ a{
     .header-top{
         background-color: $back-top-color;
         display: flex;
-        gap: 150px;
+        gap: 140px;
         
         .logo{
             .logo-img{

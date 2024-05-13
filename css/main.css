@@ -35,7 +35,7 @@ a {
 .header .header-top {
   background-color: rgb(233, 199, 105);
   display: flex;
-  gap: 150px;
+  gap: 140px;
 }
 .header .header-top .logo .logo-img {
   width: 80px;
