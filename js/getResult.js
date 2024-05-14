@@ -98,6 +98,8 @@ button.addEventListener('click', function (){
         arrayInput.pop(inputs[i].value);
         arrayAnswer.pop(inputs[i].dataset.right)
     }
+
+    console.log(countResult)
 });
 
 
