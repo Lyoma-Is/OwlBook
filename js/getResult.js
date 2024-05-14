@@ -19,10 +19,20 @@ button.addEventListener('click', function (){
         input.classList.remove('input_answer');
         input.classList.remove('input_answer-red');
         
-        if (input.value.toUpperCase() == input.dataset.right.toUpperCase()){
+        
+        if (input.dataset.right.includes(" | ")){
+            strOne = input.dataset.right
+            strTwo = strOne.slice(strOne[0], strOne.indexOf('|')-1)
+            strThree = strOne.slice(strOne.indexOf('|')+2, strOne[-1])
 
-            input.classList.add('input_answer-green');
+            if (strTwo == input.value.toUpperCase() || strThree == input.value.toUpperCase()){
+                input.classList.add('input_answer-green');      
+                countResult += 1
+            }     
             
+        }
+        else if (input.value.toUpperCase() == input.dataset.right.toUpperCase()){
+            input.classList.add('input_answer-green');        
             countResult += 1
         } else{
             input.classList.add('input_answer-red');
@@ -65,7 +75,15 @@ button.addEventListener('click', function (){
         cell.classList.add("answer_td")
         cell.classList.add('answer_table-border')
 
-        if (arrayInput[i].toUpperCase() == arrayAnswer[i].toUpperCase()){
+        if (arrayAnswer[i].includes(" | ")){
+            strOne = arrayAnswer[i].toUpperCase()
+            strTwo = strOne.slice(strOne[0], strOne.indexOf('|')-1)
+            strThree = strOne.slice(strOne.indexOf('|')+2, strOne[-1])
+
+            if (strTwo == arrayInput[i].toUpperCase() | strThree == arrayInput[i].toUpperCase()){
+                cell.classList.add('answer_bg-green')   
+            }         
+        } else if (arrayInput[i].toUpperCase() == arrayAnswer[i].toUpperCase()){
             cell.classList.add('answer_bg-green')
         } else if(arrayInput[i] == ""){
             
