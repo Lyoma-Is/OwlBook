@@ -25,13 +25,14 @@ button.addEventListener('click', function (){
             strTwo = strOne.slice(strOne[0], strOne.indexOf('|')-1)
             strThree = strOne.slice(strOne.indexOf('|')+2, strOne[-1])
 
-            if (strTwo == input.value.toUpperCase() || strThree == input.value.toUpperCase()){
+            if (strTwo == input.value.toUpperCase() | strThree == input.value.toUpperCase()){
                 input.classList.add('input_answer-green');      
                 countResult += 1
-            }     
+            } else{
+                input.classList.add('input_answer-red');
+            }    
             
-        }
-        else if (input.value.toUpperCase() == input.dataset.right.toUpperCase()){
+        } else if (input.value.toUpperCase() == input.dataset.right.toUpperCase()){
             input.classList.add('input_answer-green');        
             countResult += 1
         } else{
@@ -61,6 +62,7 @@ button.addEventListener('click', function (){
     }
 
     let table = document.createElement("table");
+
     for (let i = 0; i < inputs.length; i++){
         let row = document.createElement("tr");
 
@@ -82,7 +84,10 @@ button.addEventListener('click', function (){
 
             if (strTwo == arrayInput[i].toUpperCase() | strThree == arrayInput[i].toUpperCase()){
                 cell.classList.add('answer_bg-green')   
-            }         
+            } 
+            else{
+                cell.classList.add('answer_bg-red')
+            }       
         } else if (arrayInput[i].toUpperCase() == arrayAnswer[i].toUpperCase()){
             cell.classList.add('answer_bg-green')
         } else if(arrayInput[i] == ""){
