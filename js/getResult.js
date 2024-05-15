@@ -84,7 +84,9 @@ button.addEventListener('click', function (){
 
             if (strTwo == arrayInput[i].toUpperCase() | strThree == arrayInput[i].toUpperCase()){
                 cell.classList.add('answer_bg-green')   
-            } 
+            } else if(arrayInput[i] == ""){
+            
+            }
             else{
                 cell.classList.add('answer_bg-red')
             }       
