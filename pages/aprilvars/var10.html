@@ -36,13 +36,13 @@
 
             <!-- 1 -->
             <section class="variant-text">
-                <p class="variant-text__inner"><b>Задание 1.</b>В кодировке КОИ-8 каждый символ кодируется 8 битами. Ученица написала текст (в нём нет лишних пробелов): <br><br>
+                <p class="variant-text__inner"><b>Задание 1.</b> В одной из кодировок Unicode каждый символ кодируется 16 битами. Вова написал текст (в нём нет лишних пробелов):<br><br>
                     
-                    «Предметы мебели: пуф, стул, диван, кресло, кровать, тумбочка, оттоманка, полукресло, раскладушка».<br><br>
+                    «Алый, синий, фуксия, красный, янтарный, оранжевый, фиолетовый, канареечный, баклажановый – цвета».<br><br>
                     
-                    Ученица удалила из списка название одного предмета, а также лишние запятую и пробел – два пробела не должны идти подряд.<br>
-                    При этом размер нового предложения в данной кодировке оказался на 11 байт меньше, чем размер исходного предложения. Напишите в ответе удалённое название предмета.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="оттоманка" />
+                    Ученик вычеркнул из списка название одного цвета. Заодно он вычеркнул ставшие лишними запятую и пробел – два пробела не должны идти подряд.<br>
+                    При этом размер нового предложения в данной кодировке оказался на 12 байт меньше, чем размер исходного предложения. Напишите в ответе вычеркнутое название цвета.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="Алый" />
                     <!-- <button id="button">ПРОВЕРИТЬ</button> -->
                 </p>
 
@@ -57,158 +57,44 @@
 
             <!-- 2 -->
             <section class="variant-text">
-                <p class="variant-text__inner"> <b>Задание 2.</b> Ваня шифрует русские слова, записывая вместо каждой буквы её номер в алфавите (без пробелов). Номера букв даны в таблице.</p><br>
+                <p class="variant-text__inner"> <b>Задание 2.</b> Валя шифрует русские слова (последовательности букв),
+                    записывая вместо каждой буквы её код. Коды букв даны в таблице.</p><br><br>
 
                 <table>
+                    <thead>
+                        <tr class="tr__head">
+                            <td>А</td>
+                            <td>Д</td>
+                            <td>К</td>
+                            <td>Н</td>
+                            <td>О</td>
+                            <td>С</td>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <p><strong>А</strong>&emsp;1</p>
-                            </td>
-                            <td>
-                                <p><strong>Й</strong>&emsp;11</p>
-                            </td>
-                            <td>
-                                <p><strong>У</strong>&emsp;21</p>
-                            </td>
-                            <td>
-                                <p><strong>Э</strong>&emsp;31</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>Б</strong>&emsp;2</p>
-                            </td>
-                            <td>
-                                <p><strong>К</strong>&emsp;12</p>
-                            </td>
-                            <td>
-                                <p><strong>Ф</strong>&emsp;22</p>
-                            </td>
-                            <td>
-                                <p><strong>Ю</strong>&emsp;32</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>В</strong>&emsp;3</p>
-                            </td>
-                            <td>
-                                <p><strong>Л</strong>&emsp;13</p>
-                            </td>
-                            <td>
-                                <p><strong>Х</strong>&emsp;23</p>
-                            </td>
-                            <td>
-                                <p><strong>Я</strong>&emsp;33</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>Г</strong>&emsp;4</p>
-                            </td>
-                            <td>
-                                <p><strong>М</strong>&emsp;14</p>
-                            </td>
-                            <td>
-                                <p><strong>Ц</strong>&emsp;24</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>Д</strong>&emsp;5</p>
-                            </td>
-                            <td>
-                                <p><strong>Н</strong>&emsp;15</p>
-                            </td>
-                            <td>
-                                <p><strong>Ч</strong>&emsp;25</p>
-                            </td>
-                            <td style="border-top: 0; border-bottom: 0;">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>Е</strong>&emsp;6</p>
-                            </td>
-                            <td>
-                                <p><strong>О</strong>&emsp;16</p>
-                            </td>
-                            <td>
-                                <p><strong>Ш</strong>&emsp;26</p>
-                            </td>
-                            <td style="border-top: 0; border-bottom: 0;">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>Ё</strong>&emsp;7</p>
-                            </td>
-                            <td>
-                                <p><strong>П</strong>&emsp;17</p>
-                            </td>
-                            <td>
-                                <p><strong>Щ</strong>&emsp;27</p>
-                            </td>
-                            <td style="border-top: 0; border-bottom: 0;">
-                                <p><strong></strong>&emsp;</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>Ж</strong>&emsp;8</p>
-                            </td>
-                            <td>
-                                <p><strong>Р</strong>&emsp;18</p>
-                            </td>
-                            <td>
-                                <p><strong>Ъ</strong>&emsp;28</p>
-                            </td>
-                            <td style="border-top: 0; border-bottom: 0;">
-                                <p><strong></strong>&emsp;</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>З</strong>&emsp;9</p>
-                            </td>
-                            <td>
-                                <p><strong>С</strong>&emsp;19</p>
-                            </td>
-                            <td>
-                                <p><strong>Ы</strong>&emsp;29</p>
-                            </td>
-                            <td style="border-top: 0; border-bottom: 0;">
-                                <p><strong></strong>&emsp;</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>И</strong>&emsp;10</p>
-                            </td>
-                            <td>
-                                <p><strong>Т</strong>&emsp;20</p>
-                            </td>
-                            <td>
-                                <p><strong>Ь</strong>&emsp;30</p>
-                            </td>
-                            <td style="border-top: 0; border-bottom: 0;">
-                                <p><strong></strong>&emsp;</p>
-                            </td>
+                        <tr class="tr__body">
+                            <td>01</td>
+                            <td>100</td>
+                            <td>101</td>
+                            <td>10</td>
+                            <td>111</td>
+                            <td>000</td>
                         </tr>
 
                     </tbody>
 
                 </table><br>
-                <p class="variant-text__inner">Некоторые шифровки можно расшифровать не одним способами. Например, 311333 может означать «ВАЛЯ», может – «ЭЛЯ», а может – «ВААВВВ».<br><br>
-                    Даны четыре шифровки:<br>
-                    9828210<br>
-                    5103115<br>
-                    1213131<br>
-                    3102030<br><br>
-                    Только одна из них расшифровывается единственным способом. Найдите её и расшифруйте. Получившееся слово запишите в качестве ответа.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="ВИТЬ" />
+                <p class="variant-text__inner">Некоторые цепочки можно расшифровать несколькими способами. Например,
+                    00010101 может означать не только СКА, но и СНК.<br>
+                    Даны три кодовые цепочки:<br>
+                    100101000<br>
+                    101111100<br>
+                    100111101<br>
+                    Найдите среди них ту, которая имеет только одну расшифровку, и запишите в ответе расшифрованное
+                    слово.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="КОД" />
                 </p>
+
                 <!-- <details>
                     <summary><b>Решение</b></summary>
                     <p> Так как необходимо определить текст радиограммы, в ответе пишем набор букв.<br><br>
@@ -222,8 +108,8 @@
             <!-- 3 -->
             <section class="variant-text">
                 <p class="variant-text__inner"><b>Задание 3.</b> Напишите натуральное число x, для которого <b>ложно</b> высказывание:<br><br>
-                    <span>НЕ (x < 6) ИЛИ (x < 5).</span>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="5" />
+                    <span>(x ≥ 3) ИЛИ НЕ (x ≥ 2).</span>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="2" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -252,48 +138,48 @@
                     <tr>
                         <td>A</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
-                        <td>2</td>
                         <td>3</td>
+                        <td>5</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>B</td>
-                        <td>2</td>
+                        <td>3</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
                         <td>1</td>
-                        <td>3</td>
-                        <td>5</td>
+                        <td>6</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>C</td>
-                        <td>3</td>
+                        <td>5</td>
                         <td>1</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
                         <td>4</td>
-                        <td>3</td>
+                        <td>1</td>
                     </tr>
                     <tr>
                         <td>D</td>
                         <td></td>
-                        <td>3</td>
+                        <td>6</td>
                         <td>4</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
-                        <td>1</td>
+                        <td>3</td>
                     </tr>
                     <tr>
                         <td>E</td>
                         <td></td>
-                        <td>5</td>
-                        <td>3</td>
+                        <td></td>
                         <td>1</td>
+                        <td>3</td>
                         <td style="text-align: center; background-color: #ffbf80;"></td>
                     </tr>
                 </table>
                 <br>
                 <p class="variant-text__inner">
-                    Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт Е. Передвигаться можно только по дорогам, указанным в таблице. Каждый пункт можно посетить только один раз.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="6" />
+                    Определите длину кратчайшего пути между пунктами A и D (при условии, что передвигаться можно только по указанным в таблице дорогам). Каждый пункт можно посетить только один раз.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="8" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -320,12 +206,12 @@
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 5. </b>
                     У исполнителя Вычислитель две команды, которым присвоены номера:<br><br>
-                    <b>1. умножь на 5</b><br>
-                    <b>2. прибавь 1</b><br><br>
-                    Первая из них увеличивает число на экране в 5 раз, вторая увеличивает его на 1.<br>
-                    Составьте алгоритм получения из числа 1 числа 56, содержащий не более <b>5 команд</b>. <br>
+                    <b>1. умножь на 3</b><br>
+                    <b>2. прибавь 2</b><br><br>
+                    Первая из них увеличивает число на экране в 3 раза, вторая увеличивает его на 2.<br>
+                    Составьте алгоритм получения из числа 3 числа 69, содержащий не более <b>5 команд</b>. <br>
                     В ответе запишите только номера команд.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="21212" />
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="22121" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -357,10 +243,11 @@
                     </tr>
                     <tr>
                         <td class="table-6_td">
-                            DIM k, s AS INTEGER<br>
+                            DIM k, s, A AS INTEGER<br>
                             &emsp;INPUT s<br>
                             &emsp;INPUT k<br>
-                            &emsp;IF NOT (s < -5 AND t >= 3) THEN<br>
+                            &emsp;INPUT A<br>
+                            &emsp;IF s > А OR t > 12 THEN<br>
                                 &emsp;&emsp;PRINT "YES"<br>
                                 &emsp;ELSE<br>
                                 &emsp;&emsp;PRINT "NO"<br>
@@ -369,7 +256,8 @@
                         <td class="table-6_td">
                             s = int(input())<br>
                             k = int(input())<br>
-                            if not ((s < -4) and (t >= 3)):<br>
+                            A = int(input())<br>
+                            if (s > А) or (t > 12):<br>
                                 &emsp;print("YES")<br>
                                 else:<br>
                                 &emsp;print("NO")<br>
@@ -381,21 +269,23 @@
                     </tr>
                     <tr>
                         <td class="table-6_td">
-                            var s, k: integer;<br>
+                            var s, k, A: integer;<br>
                             begin <br>
                             &emsp;readln(s);<br>
                             &emsp;readln(k);<br>
-                            &emsp;if not((s < -4) and (t >=3 ))<br>
+                            &emsp;readln(A);<br>
+                            &emsp;if (s > А) or (t > 12)<br>
                                 &emsp;&emsp;then writeln ('YES')<br>
                                 &emsp;&emsp;else writeln ('NO')<br>
                                 end.<br>
                         </td>
                         <td class="table-6_td">алг<br>
                             нач <br>
-                            цел s, k<br>
+                            цел s, k, A<br>
                             ввод s<br>
                             ввод k<br>
-                            если не (s < -4 и t >= 3)<br>
+                            ввод A<br>
+                            если s > А или t > 12<br>
                                 &emsp;то вывод "YES"<br>
                                 &emsp;иначе вывод "NO"<br>
                                 все <br>
@@ -410,10 +300,11 @@
                         <td class="table-6_td" scope="row" colspan="2">#include <iostream><br>
                                 using namespace std;<br>
                                 int main() {<br>
-                                &emsp;int s, k;<br>
+                                &emsp;int s, k, A;
                                 &emsp;cin >> s;<br>
                                 &emsp;cin >> k;<br>
-                                &emsp;if !((s < -4) && (t >= 3))<br>
+                                &emsp;cin >> A;<br>
+                                &emsp;if (s > А || t > 12)<br>
                                     &emsp;&emsp;cout << "YES" ;<br>
                                         &emsp;else <br>
                                         &emsp;&emsp;cout << "NO" ;<br>
@@ -424,8 +315,8 @@
                     </tr>
                 </table><br>
                 <p class="variant-text__inner"> Было проведено 9 запусков программы, при которых в качестве значений переменных s и k вводились следующие пары чисел:<br><br>
-                    <span>(–5, –2); (5, 3); (–14, 3); (–12, 5), (5, –7); (10, 3); (–4, 3); (3, 0); (–4, 9).</span><br>
-                    Сколько было запусков, при которых программа напечатала «NO»?<br>
+                    <span>(13, 2); (11, 12); (–12, 12); (2, –2); (–10, –10); (6, –5); (2, 8); (9, 10); (1, 13).</span><br>
+                    Укажите наибольшее целое значение параметра А, при котором для указанных входных данных программа напечатает «NO» четыре раза.<br>
                     <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="2" />
                 </p>
                 <!-- <details>
@@ -449,16 +340,16 @@
             <!-- 7 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 7. </b>
-                    Доступ к файлу <b>game.doc</b>, находящемуся на сервере <b>doc.ru</b>, осуществляется по протоколу <b>http</b>. 
+                    Доступ к файлу <b>net.com</b>, находящемуся на сервере <b>www.ru</b>, осуществляется по протоколу <b>http</b>. 
                     Фрагменты адреса файла закодированы цифрами от 1 до 7. Запишите последовательность этих цифр, кодирующую адрес указанного файла в сети Интернет.<br><br>
-                    1) //<br>
-                    2) /<br>
-                    3) http:<br>
-                    4) ru<br>
-                    5) doc.<br>
-                    6) game<br>
-                    7) .doc<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="3154267" />
+                    1) .com<br>
+                    2) .ru<br>
+                    3) net<br>
+                    4) http<br>
+                    5) /<br>
+                    6) ://<br>
+                    7) www<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="4672531" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -483,35 +374,23 @@
                             <td><strong>Найдено страниц (в сотнях тысяч)</strong></td>
                         </tr>
                         <tr>
-                            <td><em>Стихотворение</em></td>
-                            <td>113</td>
+                            <td><em>Волга & (Ока | Кама)</em></td>
+                            <td>405</td>
                         </tr>
                         <tr>
-                            <td><em>Пушкин</em></td>
-                            <td>83</td>
+                            <td><em>Волга & Ока</em></td>
+                            <td>215</td>
                         </tr>
                         <tr>
-                            <td><em>Лесков</em></td>
-                            <td>70</td>
-                        </tr>
-                        <tr>
-                            <td><em>Стихотворение | Пушкин | Лесков</em></td>
-                            <td>211</td>
-                        </tr>
-                        <tr>
-                            <td><em>Стихотворение & Пушкин</em></td>
-                            <td>22</td>
-                        </tr>
-                        <tr>
-                            <td><em>Стихотворение & Лесков</em></td>
-                            <td>0</td>
+                            <td><em>Волга & Кама</em></td>
+                            <td>310</td>
                         </tr>
                     </tbody>
                 </table><br>
                 <p class="variant-text__inner">
-                    Какое количество страниц (в тысячах) будет найдено по запросу <em>Пушкин & Лесков</em>?<br><br>
+                    Какое количество страниц (в тысячах) будет найдено по запросу <em>Волга & Ока & Кама</em>?<br><br>
                     Считается, что все запросы выполнялись практически одновременно, так что набор страниц, содержащих все искомые слова, не изменялся за время выполнения запросов.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="33" />
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="120" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -533,10 +412,9 @@
             <!-- 9 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 9. </b>
-                    На рисунке – схема дорог, связывающих города A, B, C, D, E, F, G, H.
-По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из города А в город H?<br><br>
-                    <img class="img-task_9" src="../../img/task9/v8_task9_e8FD7c.png" alt="task9_1"><br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="6" />
+                    На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из города А в город К?<br><br>
+                    <img class="img-task_9" src="../../img/task9/v10_task9_c6457A.png" alt="task9_1"><br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="10" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -551,9 +429,9 @@
             <!-- 10 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 10.</b> 
-                    Переведите число 245 из десятичной системы счисления в двоичную систему счисления. Сколько единиц содержит полученное число? В ответе укажите одно число – количество единиц.<br>
+                    Переведите двоичное число 1100110 в десятичную систему счисления.<br>
                     <br>     
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="6" />
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="102" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -570,9 +448,9 @@
             <!-- 11 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 11. </b>
-                    В одном из произведений А.П. Чехова, текст которого приведён в подкаталоге каталога Проза, есть герой по фамилии Родэ.<br>
-                    С помощью поисковых средств операционной системы и текстового редактора или браузера выясните чин (звание) Родэ.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="Подпоручик" />
+                    В одном из произведений А.С. Пушкина, текст которого приведён в подкаталоге каталога Проза, упоминается некая Курочкина.<br>
+                    С помощью поисковых средств операционной системы и текстового редактора или браузера выясните её имя.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="Акулина" />
                 </p>
                 <!-- <details>
                     <summary><b>Решение</b></summary>
@@ -590,8 +468,8 @@
             <!-- 12 -->
             <section class="variant-text">
                 <p class="variant-text__inner"> <b>Задание 12. </b>
-                    Сколько файлов объёмом более 5 Кб каждый содержится в подкаталогах каталога DEMO-12? В ответе укажите только число.<br>
-                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="82" />
+                    Сколько файлов c расширением pdf, каждый объёмом от 2048 Кб до 3072 Кб включительно, содержится в подкаталогах каталога DEMO-12? В ответе укажите только число.<br>
+                    <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="5" />
                 </p>
 
             </section>
