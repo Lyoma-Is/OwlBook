@@ -25,14 +25,14 @@ button.addEventListener('click', function (){
             strTwo = strOne.slice(strOne[0], strOne.indexOf('|')-1)
             strThree = strOne.slice(strOne.indexOf('|')+2, strOne[-1])
 
-            if (strTwo == input.value.toUpperCase() | strThree == input.value.toUpperCase()){
+            if (strTwo == input.value.toUpperCase().replaceAll(' ', '') | strThree == input.value.toUpperCase().replaceAll(' ', '')){
                 input.classList.add('input_answer-green');      
                 countResult += 1
             } else{
                 input.classList.add('input_answer-red');
             }    
             
-        } else if (input.value.toUpperCase() == input.dataset.right.toUpperCase()){
+        } else if (input.value.toUpperCase().replaceAll(' ', '') == input.dataset.right.toUpperCase()){
             input.classList.add('input_answer-green');        
             countResult += 1
         } else{
@@ -57,7 +57,7 @@ button.addEventListener('click', function (){
 
     
     for (let i = 0; i < inputs.length; i++){
-        arrayInput.push(inputs[i].value);
+        arrayInput.push(inputs[i].value.replaceAll(' ', ''));
         arrayAnswer.push(inputs[i].dataset.right)
     }
 
